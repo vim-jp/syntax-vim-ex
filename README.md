@@ -1,1 +1,1 @@
-# gen_syn_vim
+# Neo Generator of syntax/vim.vim
