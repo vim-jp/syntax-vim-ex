@@ -1,7 +1,7 @@
 exclude:
   - vim
 include:
-  - vim.vim
+  - syntax/vim.vim
 encoding: utf-8
 
 kramdown:
