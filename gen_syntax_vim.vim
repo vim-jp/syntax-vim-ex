@@ -11,7 +11,7 @@ language C
 
 function! s:parse_vim_option(opt, missing_opt, term_out_code)
 	try
-		let file_name = '../option.c'
+		let file_name = $VIM_SRCDIR . '/option.c'
 		let item = {}
 
 		new
@@ -99,7 +99,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_command(cmd)
 	try
-		let file_name = '../ex_cmds.h'
+		let file_name = $VIM_SRCDIR . '/ex_cmds.h'
 		let item = {}
 
 		new
@@ -245,7 +245,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_event(li)
 	try
-		let file_name = '../fileio.c'
+		let file_name = $VIM_SRCDIR . '/fileio.c'
 		let item = {}
 
 		new
@@ -277,7 +277,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_function(li)
 	try
-		let file_name = '../eval.c'
+		let file_name = $VIM_SRCDIR . '/eval.c'
 		let item = {}
 
 		new
@@ -311,7 +311,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_hlgroup(li)
 	try
-		let file_name = '../syntax.c'
+		let file_name = $VIM_SRCDIR . '/syntax.c'
 		let item = {}
 
 		new
