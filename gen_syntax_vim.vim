@@ -11,7 +11,7 @@ language C
 
 function! s:parse_vim_option(opt, missing_opt, term_out_code)
 	try
-		let file_name = '../option.c'
+		let file_name = $VIM_SRCDIR . '/option.c'
 		let item = {}
 
 		new
@@ -99,7 +99,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_command(cmd)
 	try
-		let file_name = '../ex_cmds.h'
+		let file_name = $VIM_SRCDIR . '/ex_cmds.h'
 		let item = {}
 
 		new
@@ -245,7 +245,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_event(li)
 	try
-		let file_name = '../fileio.c'
+		let file_name = $VIM_SRCDIR . '/fileio.c'
 		let item = {}
 
 		new
@@ -277,7 +277,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_function(li)
 	try
-		let file_name = '../eval.c'
+		let file_name = $VIM_SRCDIR . '/eval.c'
 		let item = {}
 
 		new
@@ -311,7 +311,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_hlgroup(li)
 	try
-		let file_name = '../syntax.c'
+		let file_name = $VIM_SRCDIR . '/syntax.c'
 		let item = {}
 
 		new
@@ -543,12 +543,12 @@ try
 	let s:vim_info.hlgroup = []
 
 	set lazyredraw
-	call s:parse_vim_option(s:vim_info.opt, s:vim_info.missing_opt,
+	silent call s:parse_vim_option(s:vim_info.opt, s:vim_info.missing_opt,
 	\						s:vim_info.term_out_code)
-	call s:parse_vim_command(s:vim_info.cmd)
-	call s:parse_vim_event(s:vim_info.event)
-	call s:parse_vim_function(s:vim_info.func)
-	call s:parse_vim_hlgroup(s:vim_info.hlgroup)
+	silent call s:parse_vim_command(s:vim_info.cmd)
+	silent call s:parse_vim_event(s:vim_info.event)
+	silent call s:parse_vim_function(s:vim_info.func)
+	silent call s:parse_vim_hlgroup(s:vim_info.hlgroup)
 
 	call s:update_syntax_vim_file(s:vim_info)
 	set nolazyredraw
