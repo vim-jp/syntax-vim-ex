@@ -1,0 +1,8 @@
+exclude:
+  - vim
+include:
+  - vim.vim
+encoding: utf-8
+
+kramdown:
+  input: GFM
