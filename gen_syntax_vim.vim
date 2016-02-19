@@ -543,12 +543,12 @@ try
 	let s:vim_info.hlgroup = []
 
 	set lazyredraw
-	call s:parse_vim_option(s:vim_info.opt, s:vim_info.missing_opt,
+	silent call s:parse_vim_option(s:vim_info.opt, s:vim_info.missing_opt,
 	\						s:vim_info.term_out_code)
-	call s:parse_vim_command(s:vim_info.cmd)
-	call s:parse_vim_event(s:vim_info.event)
-	call s:parse_vim_function(s:vim_info.func)
-	call s:parse_vim_hlgroup(s:vim_info.hlgroup)
+	silent call s:parse_vim_command(s:vim_info.cmd)
+	silent call s:parse_vim_event(s:vim_info.event)
+	silent call s:parse_vim_function(s:vim_info.func)
+	silent call s:parse_vim_hlgroup(s:vim_info.hlgroup)
 
 	call s:update_syntax_vim_file(s:vim_info)
 	set nolazyredraw

@@ -2,12 +2,12 @@
 :"     '" Last Change:  '
 :"
 :language C
-:new vim.vim.rc
+:silent new vim.vim.rc
 :let pat = '^"\s*Last\s*Change:\s\+'
 :let lnum = search(pat, 'We', 10)
 :if lnum > 0
 :   exec 'norm! lD"=strftime("%b %d, %Y")' . "\rp"
-:   update
+:   silent update
 :endif
 :quitall!
 :" vim:ts=4 sw=4 et
