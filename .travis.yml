@@ -1,5 +1,12 @@
 language: c
 sudo: false
 
+git:
+  submodules: false
+
+before_script:
+  - git submodule init
+  - git submodule update --depth 1
+
 script:
   - make && make test
