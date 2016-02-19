@@ -20,8 +20,8 @@ vim:
 	git clone --branch=master --single-branch --depth=1 https://github.com/vim/vim.git vim
 
 vim.vim: vim.vim.rc update_date.vim
-	$(RUN_VIM) -s update_date.vim
 	cp -f vim.vim.rc vim.vim
+	$(RUN_VIM) -c "so update_date.vim"
 
 vim.vim.rc: vim gen_syntax_vim.vim vim.vim.base
 	rm -f sanity_check.err generator.err
