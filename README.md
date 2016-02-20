@@ -11,7 +11,7 @@ You can download generated recent syntax/vim.vim at <http://vim-jp.org/gen_syn_v
     $ git clone https://github.com/vim-jp/gen_syn_vim.git
     $ cd gen_syn_vim
     $ git submodule init
-    $ git submodule update --depth 1
+    $ git submodule update --depth 50
 
 Then execute `make` will generate `vim.vim`.
 
@@ -28,7 +28,7 @@ Preparation:
     $ git clone git@github.com:vim-jp/gen_syn_vim.git
     $ cd gen_syn_vim
     $ git submodule init
-    $ git submodule update --depth 1
+    $ git submodule update --depth 100
 
 How to catch up Vim and deploy new syntax/vim.vim:
 
