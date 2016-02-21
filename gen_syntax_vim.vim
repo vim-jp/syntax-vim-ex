@@ -17,7 +17,7 @@ function! s:parse_vim_option(opt, missing_opt, term_out_code)
 		new
 		exec 'read ' . file_name
 		norm! gg
-		exec '/^\s*options\[\]\s*=\s*$/+1;/^\s*#\s*define\s*p_term(/-1yank a'
+		exec '/^.*\s*options\[\]\s*=\s*$/+1;/^\s*#\s*define\s*p_term(/-1yank a'
 		exec '/^#define\s\+p_term(/+1;/^};$/-1yank b'
 		%delete _
 
@@ -105,7 +105,7 @@ function! s:parse_vim_command(cmd)
 		new
 		exec 'read ' . file_name
 		norm! gg
-		exec '/^\s*cmdnames\[\]\s*=\s*$/+1;/^};/-1yank'
+		exec '/^}\?\s*cmdnames\[\]\s*=\s*$/+1;/^};/-1yank'
 		%delete _
 		put
 		g!/^EX(/d
