@@ -1,4 +1,5 @@
 /*.err/
 /_site/
+/tmp/
 /vim.vim.rc
 /vim/
