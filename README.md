@@ -1,6 +1,6 @@
 # Generator of syntax/vim.vim
 
-[![Build Status](https://travis-ci.org/vim-jp/gen_syn_vim.svg?branch=master)](https://travis-ci.org/vim-jp/gen_syn_vim)
+[![Build Status](https://travis-ci.org/vim-jp/syntax-vim-ex.svg?branch=generator)](https://travis-ci.org/vim-jp/syntax-vim-ex)
 
 Full open source sytax/vim.vim generator.
 

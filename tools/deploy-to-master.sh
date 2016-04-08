@@ -4,7 +4,7 @@ set -e
 
 dir=$1 ; shift
 
-git clone -b gh-pages --depth 1 "git@github.com:${DEPLOY_REPO_SLUG}.git" "$dir"
+git clone -b master --single-branch --depth 1 "git@github.com:${DEPLOY_REPO_SLUG}.git" "$dir"
 
 # install
 cp -f vim.vim "$dir/syntax/"

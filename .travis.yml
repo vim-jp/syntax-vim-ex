@@ -4,10 +4,10 @@ sudo: false
 env:
   global:
     - secure: "a7QIB4vRCvBq+2THOoD4lRQHsUOSCzSDRAB0DAOVNHC+scp7EnWQYlDeeKt1Mj7cB/2m/izsiuvzdF8yKZdkidvJ3K0YXGzhaJ0+WWLgg2r/eAePGf+o6aDeZtgBhftXkowO5RJlyhqoHwbiAD9midmQ7VzoFAw1Vp88zOHvpiyJB36HcQvWBipBBLRnr+B+ff2nmL2lK88nhYM/0q3amZmM5VlxvdJ23mtbPrEQNcyLrLtupsPGGmGWwmVzneq09EBcJ2rxxdeqlch+ZwM0uOlSF/6CL55470QNafCpBhtrLMVTCjaWmg3MQ5rc+Y37nOFSlwlX5IdrOQ2weoLmJE9JDkVpeEzhPSwnhQxSqTj7KSZVA5DF8QbKFPkSXcM8TJIv1hduFgLarvKAZCg+16Gqvv3q0Y2rr37CUn96g9cJz072zG0wXE+DQ7LYohMG7V+IMPLhxLabSCLZ8YkvVV15ISwCDFZUkx0Ad6F3hHKoRaCmkBBf/MgVSqx2P3po59LID9Q6NrolSM4AJT+3OMmnUnDvB7b5WiSWtknAcL+Mt7QHC+9Ew2Bz4KLVIQSQ1756GzSEii4PXgXnq9uEn1bfWuUF3VtV+dcMIr3LKVoOxL5xZoTgVvAT/x3XMFTIUGbm+1o1Pwci5OZNeGXlHoIX/vpKuFWkE8tBkgowimU="
-    - 'DEPLOY_BRANCH="master"'
-    - 'DEPLOY_REPO_SLUG="vim-jp/gen_syn_vim"'
-    - 'DEPLOY_USER_NAME="gen_syn_vim on travis-ci"'
-    - 'DEPLOY_USER_EMAIL="gen_syn_vim+travis-ci@vim-jp.org"'
+    - 'DEPLOY_BRANCH="generator"'
+    - 'DEPLOY_REPO_SLUG="vim-jp/syntax-vim-ex"'
+    - 'DEPLOY_USER_NAME="syntax-vim-ex on travis-ci"'
+    - 'DEPLOY_USER_EMAIL="syntax-vim-ex+travis-ci@vim-jp.org"'
 
 git:
   submodules: false
@@ -20,5 +20,5 @@ script:
   - make && make test
 
 after_success:
-  - sh ./tools/install_sshkey_github.sh "$CI_KEY" ./tools/ci@gen_syn_vim.vim-jp.org.enc ~/.ssh/ci@gen_syn_vim.vim-jp.org
-  - '[ "$TRAVIS_BRANCH" == "$DEPLOY_BRANCH" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && sh ./tools/deploy-gh-pages.sh _gh-pages'
+  - sh ./tools/install_sshkey_github.sh "$CI_KEY" ./tools/ci@syntax-vim-ex.vim-jp.org.enc ~/.ssh/ci@syntax-vim-ex.vim-jp.org
+  - '[ "$TRAVIS_BRANCH" == "$DEPLOY_BRANCH" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && sh ./tools/deploy-to-master.sh _master'
