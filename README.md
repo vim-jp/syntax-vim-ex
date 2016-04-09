@@ -12,6 +12,10 @@ An excellent Vim's syntax highlighting file for Vim script.
 -   It will immediately follow the Vim updates.
 -   Generator source code is all open sourced.  (See generator branch)
 
+## Requirement
+
+Vim 7.4.1486 or later
+
 ## How to Install
 
 ```sh
