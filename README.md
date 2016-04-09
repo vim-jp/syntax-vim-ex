@@ -4,12 +4,12 @@
 
 Full open source sytax/vim.vim generator.
 
-You can download generated recent syntax/vim.vim at <http://vim-jp.org/gen_syn_vim/>.
+You can download generated recent syntax/vim.vim at <http://vim-jp.org/syntax-vim-ex/>.
 
 ## How to Build on Local
 
-    $ git clone https://github.com/vim-jp/gen_syn_vim.git
-    $ cd gen_syn_vim
+    $ git clone -b generator https://github.com/vim-jp/syntax-vim-ex.git
+    $ cd syntax-vim-ex
     $ git submodule init
     $ git submodule update --depth 50
 
@@ -25,21 +25,21 @@ For maintainers.
 
 Preparation:
 
-    $ git clone git@github.com:vim-jp/gen_syn_vim.git
-    $ cd gen_syn_vim
+    $ git clone -b generator git@github.com:vim-jp/syntax-vim-ex.git
+    $ cd syntax-vim-ex
     $ git submodule init
     $ git submodule update --depth 100
 
 How to catch up Vim and deploy new syntax/vim.vim:
 
-    $ cd gen_syn_vim/vim
+    $ cd syntax-vim-ex/vim
     $ git pull -p
     $ cd ..
     $ git commit -am "catch up vim 7.4.xxx ..."
     $ git push
 
 When push to `master` branch, travis-ci built new sytanx/vim.vim and deploy it
-to gh-pages <http://vim-jp.org/gen_syn_vim/> automatically.
+to gh-pages <http://vim-jp.org/syntax-vim-ex/> automatically.
 
 ## Files
 
