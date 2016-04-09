@@ -50,7 +50,7 @@ Follow the [Vim license][license]
 
 ## Authors
 
--   [Hirohito Higashi](https://github.com/h-east)
+-   [Hirohito Higashi (a.k.a. h_east)](https://github.com/h-east)
 -   [vim-jp](http://vim-jp.org/)
 -   Charles E. Campbell (author of [original syntax/vim.vim][original])
 
