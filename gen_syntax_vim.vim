@@ -137,7 +137,7 @@ function! s:parse_vim_command(cmd)
 							if pre == my
 								continue
 							endif
-							" for wired abbreviations for delete. (See :help :d)
+							" for weird abbreviations for delete. (See :help :d)
 							if lcmd[key][my][:idx] ==# lcmd[key][pre][:idx] ||
 							\	(key ==# 'd' &&
 							\		lcmd[key][my][:idx] =~# '^d\%[elete][lp]$')
@@ -164,7 +164,7 @@ function! s:parse_vim_command(cmd)
 			endfor
 		endfor
 
-		" Add wired abbreviations for delete. (See :help :d)
+		" Add weird abbreviations for delete. (See :help :d)
 		for i in ['l', 'p']
 			let str = 'delete'
 			let item.name = str . i
