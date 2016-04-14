@@ -1,8 +1,8 @@
 " Vim syntax file generator
 " Language: Vim 7.4 script
-" Maintainer: Hirohito Higashi
-" Last Change: OCT 10, 2015
-" Version: 0.0.1
+" Maintainer: Hirohito Higashi (a.k.a. h_east)  https://github.com/h-east
+" Last Change: Apr 14, 2016
+" Version: 1.0.0
 
 let s:keepcpo= &cpo
 set cpo&vim
@@ -370,6 +370,38 @@ function! s:parse_vim_hlgroup(li)
 endfunc
 
 " ------------------------------------------------------------------------------
+function! s:parse_vim_complete_name(li)
+	try
+		let file_name = $VIM_SRCDIR . '/ex_docmd.c'
+		let item = {}
+
+		new
+		exec 'read ' . file_name
+		norm! gg
+		exec '/^}\s*command_complete\[\]\s*=\s*$/+1;/^};/-1yank'
+		%delete _
+
+		put
+		g!/^\s*{.*"\w\+"\s*}\s*,.*$/d
+
+		for line in getline(1, line('$'))
+			let list = matchlist(line, '^\s*{.*"\(\w\+\)"\s*}\s*,')
+			let item.name = list[1]
+			call add(a:li, copy(item))
+		endfor
+
+		quit!
+
+		if empty(a:li)
+			throw 'complete_name is empty'
+		endif
+	catch /.*/
+		call s:err_gen('')
+		throw 'exit'
+	endtry
+endfunc
+
+" ------------------------------------------------------------------------------
 function! s:append_syn_any(lnum, str_info, li)
 	let ret_lnum = a:lnum
 	let str = a:str_info.start
@@ -474,6 +506,11 @@ function! s:update_syntax_vim_file(vim_info)
 		let lnum = s:search_and_check('vimFuncName', base_fname, str_info)
 		let lnum = s:append_syn_any(lnum, str_info, li)
 
+		" vimUserAttrbCmplt
+		let li = a:vim_info.compl_name
+		let lnum = s:search_and_check('vimUserAttrbCmplt', base_fname, str_info)
+		let lnum = s:append_syn_any(lnum, str_info, li)
+
 		" vimCommand - abbrev
 		let kword = 'vimCommand'
 		let li = a:vim_info.cmd
@@ -541,6 +578,7 @@ try
 	let s:vim_info.event = []
 	let s:vim_info.func = []
 	let s:vim_info.hlgroup = []
+	let s:vim_info.compl_name = []
 
 	set lazyredraw
 	silent call s:parse_vim_option(s:vim_info.opt, s:vim_info.missing_opt,
@@ -549,6 +587,7 @@ try
 	silent call s:parse_vim_event(s:vim_info.event)
 	silent call s:parse_vim_function(s:vim_info.func)
 	silent call s:parse_vim_hlgroup(s:vim_info.hlgroup)
+	silent call s:parse_vim_complete_name(s:vim_info.compl_name)
 
 	call s:update_syntax_vim_file(s:vim_info)
 	set nolazyredraw

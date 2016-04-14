@@ -252,7 +252,7 @@ if !exists("g:vimsyn_noerror") && !exists("g:vimsyn_nousercmderror")
 endif
 syn case ignore
 syn keyword	vimUserAttrbKey   contained	bar	ban[g]	cou[nt]	ra[nge] com[plete]	n[args]	re[gister]
-syn keyword	vimUserAttrbCmplt contained	augroup buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight locale mapping menu option shellcmd sign syntax tag tag_listfiles var
+" GEN_SYN_VIM: vimUserAttrbCmplt, START_STR='syn keyword vimUserAttrbCmplt contained', END_STR=''
 syn keyword	vimUserAttrbCmplt contained	custom customlist nextgroup=vimUserAttrbCmpltFunc,vimUserCmdError
 syn match	vimUserAttrbCmpltFunc contained	",\%([sS]:\|<[sS][iI][dD]>\)\=\%(\h\w*\%(#\h\w*\)\+\|\h\w*\)"hs=s+1 nextgroup=vimUserCmdError
 
