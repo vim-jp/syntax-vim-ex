@@ -1,8 +1,8 @@
 RUN_VIM = vim -N -u NONE -i NONE -n
 VIM_SRCDIR = ./vim/src
 
-SRC =	$(VIM_SRCDIR)/eval.c $(VIM_SRCDIR)/ex_cmds.h $(VIM_SRCDIR)/fileio.c \
-      	$(VIM_SRCDIR)/option.c $(VIM_SRCDIR)/syntax.c
+SRC =	$(VIM_SRCDIR)/eval.c $(VIM_SRCDIR)/ex_cmds.h $(VIM_SRCDIR)/ex_docmd.c \
+		$(VIM_SRCDIR)/fileio.c $(VIM_SRCDIR)/option.c $(VIM_SRCDIR)/syntax.c
 
 export VIM_SRCDIR
 
