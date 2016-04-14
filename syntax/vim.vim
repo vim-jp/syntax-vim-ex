@@ -2,7 +2,7 @@
 " Language:	Vim 7.4 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Apr 13, 2016
+" Last Change:	Apr 14, 2016
 " Version:	7.4-47
 
 " DO NOT CHANGE DIRECTLY.
@@ -95,10 +95,10 @@ syn case match
 " Function Names {{{2
 " GEN_SYN_VIM: vimFuncName, START_STR='syn keyword vimFuncName contained', END_STR=''
 syn keyword vimFuncName contained abs acos add alloc_fail and append argc argidx arglistid argv asin assert_equal assert_exception assert_fails assert_false assert_match assert_notequal assert_notmatch assert_true atan atan2 browse browsedir bufexists buflisted bufloaded bufname bufnr bufwinnr byte2line byteidx byteidxcomp call ceil ch_close ch_evalexpr ch_evalraw ch_getbufnr ch_getjob ch_info ch_log ch_logfile ch_open ch_read ch_readraw ch_sendexpr ch_sendraw ch_setoptions ch_status changenr char2nr cindent clearmatches col complete complete_add complete_check confirm copy cos cosh count cscope_connection cursor deepcopy delete did_filetype diff_filler diff_hlID disable_char_avail_for_testing empty escape eval eventhandler executable exepath exists exp expand
-syn keyword vimFuncName contained extend feedkeys filereadable filewritable filter finddir findfile float2nr floor fmod fnameescape fnamemodify foldclosed foldclosedend foldlevel foldtext foldtextresult foreground function garbagecollect get getbufline getbufvar getchar getcharmod getcharsearch getcmdline getcmdpos getcmdtype getcmdwintype getcurpos getcwd getfontname getfperm getfsize getftime getftype getline getloclist getmatches getpid getpos getqflist getreg getregtype gettabvar gettabwinvar getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog inputlist inputrestore inputsave inputsecret insert invert isdirectory islocked isnan
-syn keyword vimFuncName contained items job_getchannel job_info job_setoptions job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or pathshorten perleval pow prevnonblank printf pumvisible py3eval pyeval range readfile reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remove rename repeat resolve reverse round screenattr screenchar screencol screenrow search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufvar setcharsearch setcmdpos
-syn keyword vimFuncName contained setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strchars strdisplaywidth strftime stridx string strlen strpart strridx strtrans strwidth submatch substitute synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname timer_start timer_stop tolower toupper tr trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win winbufnr wincol winheight winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile
-syn keyword vimFuncName contained xor
+syn keyword vimFuncName contained extend feedkeys filereadable filewritable filter finddir findfile float2nr floor fmod fnameescape fnamemodify foldclosed foldclosedend foldlevel foldtext foldtextresult foreground function garbagecollect garbagecollect_for_testing get getbufline getbufvar getchar getcharmod getcharsearch getcmdline getcmdpos getcmdtype getcmdwintype getcurpos getcwd getfontname getfperm getfsize getftime getftype getline getloclist getmatches getpid getpos getqflist getreg getregtype gettabvar gettabwinvar getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog inputlist inputrestore inputsave inputsecret insert invert
+syn keyword vimFuncName contained isdirectory islocked isnan items job_getchannel job_info job_setoptions job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or pathshorten perleval pow prevnonblank printf pumvisible py3eval pyeval range readfile reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remove rename repeat resolve reverse round screenattr screenchar screencol screenrow search searchdecl searchpair searchpairpos searchpos server2client serverlist
+syn keyword vimFuncName contained setbufvar setcharsearch setcmdpos setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart strridx strtrans strwidth submatch substitute synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname timer_start timer_stop tolower toupper tr trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win winbufnr wincol winheight winline winnr winrestcmd
+syn keyword vimFuncName contained winrestview winsaveview winwidth wordcount writefile xor
 
 "--- syntax here and above generated by mkvimvim ---
 " Special Vim Highlighting (not automatic) {{{1
@@ -284,7 +284,8 @@ if !exists("g:vimsyn_noerror") && !exists("g:vimsyn_nousercmderror")
 endif
 syn case ignore
 syn keyword	vimUserAttrbKey   contained	bar	ban[g]	cou[nt]	ra[nge] com[plete]	n[args]	re[gister]
-syn keyword	vimUserAttrbCmplt contained	augroup buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight locale mapping menu option shellcmd sign syntax tag tag_listfiles var
+" GEN_SYN_VIM: vimUserAttrbCmplt, START_STR='syn keyword vimUserAttrbCmplt contained', END_STR=''
+syn keyword vimUserAttrbCmplt contained augroup behave buffer color command compiler cscope custom customlist dir environment event expression file file_in_path filetype function help highlight history locale mapping menu syntax syntime option packadd shellcmd sign tag tag_listfiles user var
 syn keyword	vimUserAttrbCmplt contained	custom customlist nextgroup=vimUserAttrbCmpltFunc,vimUserCmdError
 syn match	vimUserAttrbCmpltFunc contained	",\%([sS]:\|<[sS][iI][dD]>\)\=\%(\h\w*\%(#\h\w*\)\+\|\h\w*\)"hs=s+1 nextgroup=vimUserCmdError
 
@@ -326,7 +327,7 @@ syn match	vimStringCont	contained	+\(\\\\\|.\)\{-}[^\\]"+
 syn cluster	vimSubstList	contains=vimPatSep,vimPatRegion,vimPatSepErr,vimSubstTwoBS,vimSubstRange,vimNotation
 syn cluster	vimSubstRepList	contains=vimSubstSubstr,vimSubstTwoBS,vimNotation
 syn cluster	vimSubstList	add=vimCollection
-syn match	vimSubst	"\(:\+\s*\|^\s*\||\s*\)\<\%(s\%[ubstitute]\|sm\%[agic]\|sno\%[magic]\)[:[:alpha:]]\@!" nextgroup=vimSubstPat
+syn match	vimSubst	"\(:\+\s*\|^\s*\||\s*\)\<\%(s\%[ubstitute]\|sm\%[agic]\|sno\%[magic]\|sc[egiInpl]\=\|sg[ceiInplr]\=\|si[ceInpr]\=\|sI[ceginplr]\=\|sr[cgiInpl]\=\)[:[:alpha:]]\@!" nextgroup=vimSubstPat
 syn match	vimSubst	"\%(^\|[^\\]\)s\%[ubstitute][:#[:alpha:]]\@!"	nextgroup=vimSubstPat contained
 syn match	vimSubst	"/\zss\%[ubstitute]\ze/"	nextgroup=vimSubstPat
 syn match	vimSubst1       contained	"s\%[ubstitute]\>"	nextgroup=vimSubstPat
