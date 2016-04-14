@@ -383,6 +383,7 @@ function! s:parse_vim_complete_name(li)
 
 		put
 		g!/^\s*{.*"\w\+"\s*}\s*,.*$/d
+		g/"custom\(list\)\?"/d
 
 		for line in getline(1, line('$'))
 			let list = matchlist(line, '^\s*{.*"\(\w\+\)"\s*}\s*,')
