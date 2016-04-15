@@ -13,8 +13,13 @@
 
 " Quit when a syntax file was already loaded {{{2
 if exists("b:current_syntax")
-  finish
+  if !exists("b:loaded_syntax_vim_ex")
+    syntax clear
+  else
+    finish
+  endif
 endif
+let b:loaded_syntax_vim_ex=1
 let s:keepcpo= &cpo
 set cpo&vim
 
