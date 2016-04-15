@@ -2,7 +2,7 @@
 " Language:	Vim 7.4 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Apr 14, 2016
+" Last Change:	Apr 15, 2016
 " Version:	7.4-47
 
 " DO NOT CHANGE DIRECTLY.
