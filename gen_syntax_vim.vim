@@ -187,18 +187,28 @@ function! s:parse_vim_command(cmd)
 endfunc
 
 function! s:get_vim_command_type(cmd_name)
+	" Return value:
+	"   0: normal
+	"   1: (Reserved)
+	"   2: abbrev (without un)
+	"   3: menu
+	"   4: map
+	"   5: mapclear
+	"   6: unmap
+	"   99: (Exclude registration of "syn keyword")
 	let map_prefix = '^[anvxsoilc]\?'
-	" 0: normal
-	" 1: let / unlet
-	" 2: abbrev (without un)
-	" 3: menu
-	" 4: map
-	" 5: mapclear
-	" 6: unmap
+	let exclude_list = [
+	\	'map',
+	\	'substitute', 'smagic', 'snomagic',
+	\	'setlocal', 'setglobal', 'set',
+	\	'autocmd', 'doautocmd', 'doautoall',
+	\	'echo', 'echohl', 'execute',
+	\	'behave', 'filetype', 'augroup', 'normal', 'syntax',
+	\ ]
+	" \	'global', 'vglobal'
 
-	" TODO: behave, augroup, autocmd
-	if a:cmd_name =~# '^\%(un\)\?let$'
-		let ret = 1
+	if index(exclude_list, a:cmd_name) != -1
+		let ret = 99
 	elseif a:cmd_name =~# '^\%(abbreviate\|noreabbrev\|\l\%(nore\)\?abbrev\)$'
 		let ret = 2
 	elseif a:cmd_name =~# '^[anovxsic]\?\%(nore\|un\)\?menu$'
