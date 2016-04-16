@@ -6,6 +6,11 @@ dir=$1 ; shift
 
 git clone -b master --single-branch --depth 1 "git@github.com:${DEPLOY_REPO_SLUG}.git" "$dir"
 
+# Embed a commit date and hash.  like a "2016-04-16T11:57:44+09:00 48ae020"
+commit_info="$(git log -1 generator --format='%cI %h')"
+repl_keyword="___GENERATOR_COMMIT_DATE_AND_HASH___"
+sed -i -e "s/$repl_keyword/$commit_info/" vim.vim
+
 # install
 cp -f vim.vim "$dir/syntax/"
 
