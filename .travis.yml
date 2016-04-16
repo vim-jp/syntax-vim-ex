@@ -13,11 +13,13 @@ git:
   submodules: false
 
 before_script:
+  - git version
   - git submodule init
   - git submodule update --depth 50
 
 script:
-  - make && make test
+  - make REVISION="$(date +%Y-%m-%dT%H:%M:%S%:z) $(git log -1 --format=%h)"
+  - make test
 
 after_success:
   - sh ./tools/install_sshkey_github.sh "$CI_KEY" ./tools/ci@syntax-vim-ex.vim-jp.org.enc ~/.ssh/ci@syntax-vim-ex.vim-jp.org
