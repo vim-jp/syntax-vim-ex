@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="___GENERATOR_COMMIT_DATE_AND_HASH___"
+let b:loaded_syntax_vim_ex="__REVISION__"
 let s:keepcpo= &cpo
 set cpo&vim
 
