@@ -2,7 +2,7 @@
 " Language:	Vim 7.4 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Jun 01, 2016
+" Last Change:	Jun 05, 2016
 " Version:	7.4-50
 
 " DO NOT CHANGE DIRECTLY.
@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2016-06-01T00:37:05+00:00 913297a"
+let b:loaded_syntax_vim_ex="2016-06-05T13:18:46+00:00 37ee79a"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -99,7 +99,7 @@ syn case match
 
 " Function Names {{{2
 " GEN_SYN_VIM: vimFuncName, START_STR='syn keyword vimFuncName contained', END_STR=''
-syn keyword vimFuncName contained abs acos add and append argc argidx arglistid argv asin assert_equal assert_exception assert_fails assert_false assert_match assert_notequal assert_notmatch assert_true atan atan2 browse browsedir bufexists buflisted bufloaded bufname bufnr bufwinnr byte2line byteidx byteidxcomp call ceil ch_close ch_evalexpr ch_evalraw ch_getbufnr ch_getjob ch_info ch_log ch_logfile ch_open ch_read ch_readraw ch_sendexpr ch_sendraw ch_setoptions ch_status changenr char2nr cindent clearmatches col complete complete_add complete_check confirm copy cos cosh count cscope_connection cursor deepcopy delete did_filetype diff_filler diff_hlID empty escape eval eventhandler executable exepath exists exp expand extend feedkeys filereadable filewritable
+syn keyword vimFuncName contained abs acos add and append argc argidx arglistid argv asin assert_equal assert_exception assert_fails assert_false assert_match assert_notequal assert_notmatch assert_true atan atan2 browse browsedir bufexists buflisted bufloaded bufname bufnr bufwinid bufwinnr byte2line byteidx byteidxcomp call ceil ch_close ch_evalexpr ch_evalraw ch_getbufnr ch_getjob ch_info ch_log ch_logfile ch_open ch_read ch_readraw ch_sendexpr ch_sendraw ch_setoptions ch_status changenr char2nr cindent clearmatches col complete complete_add complete_check confirm copy cos cosh count cscope_connection cursor deepcopy delete did_filetype diff_filler diff_hlID empty escape eval eventhandler executable exepath exists exp expand extend feedkeys filereadable filewritable
 syn keyword vimFuncName contained filter finddir findfile float2nr floor fmod fnameescape fnamemodify foldclosed foldclosedend foldlevel foldtext foldtextresult foreground function garbagecollect get getbufline getbufvar getchar getcharmod getcharsearch getcmdline getcmdpos getcmdtype getcmdwintype getcurpos getcwd getfontname getfperm getfsize getftime getftype getline getloclist getmatches getpid getpos getqflist getreg getregtype gettabvar gettabwinvar getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog inputlist inputrestore inputsave inputsecret insert invert isdirectory islocked isnan items job_getchannel job_info job_setoptions
 syn keyword vimFuncName contained job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or pathshorten perleval pow prevnonblank printf pumvisible py3eval pyeval range readfile reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remove rename repeat resolve reverse round screenattr screenchar screencol screenrow search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufvar setcharsearch setcmdpos setfperm setline setloclist setmatches
 syn keyword vimFuncName contained setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart strridx strtrans strwidth submatch substitute synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname test_alloc_fail test_disable_char_avail test_garbagecollect_now test_null_channel test_null_dict test_null_job test_null_list test_null_partial test_null_string timer_start timer_stop tolower toupper tr trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid
