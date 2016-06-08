@@ -9,8 +9,23 @@ export VIM_SRCDIR
 
 build: vim.vim
 
+builddiff: update build diff
+
 test: vim.vim
 	grep -e '^let b:loaded_syntax_vim_ex=' vim.vim | grep -v -e __REVISION__
+
+update:
+	(cd vim; git pull -p)
+
+diff:
+	git stash
+	git checkout master
+	git pull -f
+	cp -f vim.vim syntax/
+	git diff --word-diff
+	git checkout -f master
+	git checkout generator
+	git stash pop
 
 clean:
 	rm -f vim.vim.rc
@@ -18,7 +33,7 @@ clean:
 
 distclean: clean
 
-.PHONY: build test clean distclean
+.PHONY: build builddiff test update diff clean distclean
 
 vim.vim: vim.vim.rc update_date.vim
 	cp -f vim.vim.rc vim.vim
