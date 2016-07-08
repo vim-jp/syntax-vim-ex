@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2016-07-08T01:02:05+00:00 a1cb600"
+let b:loaded_syntax_vim_ex="2016-07-08T01:46:14+00:00 606cf28"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -445,12 +445,12 @@ syn match	vimMenuBang	"!"	contained skipwhite nextgroup=@vimMenuList
 " ======================
 syn case ignore
 syn match	vimNotation	"\(\\\=<\|<lt>\)\([scamd]-\)\{0,4}x\=\(f\d\{1,2}\|[^ \t:]\|cr\|lf\|linefeed\|enter\|return\|k\=del\%[ete]\|bs\|backspace\|tab\|esc\|right\|left\|help\|undo\|insert\|ins\|k\=home\|k\=end\|kplus\|kminus\|kdivide\|kmultiply\|kenter\|kpoint\|space\|k\=\(page\)\=\(\|down\|up\|k\d\>\)\)>" contains=vimBracket
-syn match	vimNotation	"\(\\\=\|<lt>\)\([scam2-4]-\)\{0,4}\(right\|left\|middle\)\(mouse\)\=\(drag\|release\)\=>"	contains=vimBracket
-syn match	vimNotation	"\(\\\=\|<lt>\)\(bslash\|plug\|sid\|space\|bar\|nop\|nul\|lt\)>"		contains=vimBracket
-syn match	vimNotation	'\(\\\=\|<lt>\)C-R>[0-9a-z"%#:.\-=]'he=e-1			contains=vimBracket
-syn match	vimNotation	'\(\\\=\|<lt>\)\%(q-\)\=\(args\|bang\|count\|line[12]\|lt\|reg\|register\|mods\)>'	contains=vimBracket
-syn match	vimNotation	'\(\\\=\|<lt>\)f-\(mods\|args\)>'	contains=vimBracket
-syn match	vimNotation	"\(\\\=\|<lt>\)\([cas]file\|abuf\|amatch\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
+syn match	vimNotation	"\(\\\=<\|<lt>\)\([scam2-4]-\)\{0,4}\(right\|left\|middle\)\(mouse\)\=\(drag\|release\)\=>"	contains=vimBracket
+syn match	vimNotation	"\(\\\=<\|<lt>\)\(bslash\|plug\|sid\|space\|bar\|nop\|nul\|lt\)>"		contains=vimBracket
+syn match	vimNotation	'\(\\\=<\|<lt>\)C-R>[0-9a-z"%#:.\-=]'he=e-1			contains=vimBracket
+syn match	vimNotation	'\(\\\=<\|<lt>\)\%(q-\)\=\(args\|bang\|count\|line[12]\|lt\|reg\|register\|mods\)>'	contains=vimBracket
+syn match	vimNotation	'\(\\\=<\|<lt>\)f-\(mods\|args\)>'	contains=vimBracket
+syn match	vimNotation	"\(\\\=<\|<lt>\)\([cas]file\|abuf\|amatch\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
 syn match	vimBracket contained	"[\\<>]"
 syn case match
 
