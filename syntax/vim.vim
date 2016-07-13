@@ -2,7 +2,7 @@
 " Language:	Vim 7.4 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Jul 10, 2016
+" Last Change:	Jul 13, 2016
 " Version:	7.4-50
 
 " DO NOT CHANGE DIRECTLY.
@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2016-07-10T00:32:31+00:00 8b44cd0"
+let b:loaded_syntax_vim_ex="2016-07-13T00:37:37+00:00 8dc77ff"
 let s:keepcpo= &cpo
 set cpo&vim
 
