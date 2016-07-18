@@ -287,7 +287,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_function(li)
 	try
-		let file_name = $VIM_SRCDIR . '/eval.c'
+		let file_name = $VIM_SRCDIR . '/evalfunc.c'
 		let item = {}
 
 		new
