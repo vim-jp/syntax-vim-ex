@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2016-07-22T01:10:46+00:00 a69c02a"
+let b:loaded_syntax_vim_ex="2016-07-22T22:40:15+00:00 ffc9c2a"
 let s:keepcpo= &cpo
 set cpo&vim
 
