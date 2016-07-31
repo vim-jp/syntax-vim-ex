@@ -138,9 +138,12 @@ function! s:parse_vim_command(cmd)
 								continue
 							endif
 							" for weird abbreviations for delete. (See :help :d)
+							" And k{char} is used as mark. (See :help :k)
 							if lcmd[key][my][:idx] ==# lcmd[key][pre][:idx] ||
 							\	(key ==# 'd' &&
 							\		lcmd[key][my][:idx] =~# '^d\%[elete][lp]$')
+							\	|| (key ==# 'k' &&
+							\		lcmd[key][my][:idx] =~# '^k[a-zA-Z]$')
 								let matched = 1
 								let omit_idx = idx + 1
 								break
