@@ -337,7 +337,7 @@ function! s:parse_vim_hlgroup(li)
 		%delete _
 		put a
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^\s*"\(\w\+\)[^"]*")\?,')
+			let list = matchlist(line, '^\s*"\%(\l\+\s\+\)*\(\a*\)[^"]*")\?,')
 			if !empty(list)
 				let item.name = list[1]
 				let item.type = 'both'
@@ -348,7 +348,7 @@ function! s:parse_vim_hlgroup(li)
 		%delete _
 		put b
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^\s*"\(\w\+\)[^"]*")\?,')
+			let list = matchlist(line, '^\s*"\%(\l\+\s\+\)*\(\a*\)[^"]*")\?,')
 			if !empty(list)
 				let item.name = list[1]
 				let item.type = 'light'
@@ -359,7 +359,7 @@ function! s:parse_vim_hlgroup(li)
 		%delete _
 		put d
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^\s*if\s*(set_group_colors(.*"\(\w\+\)",')
+			let list = matchlist(line, '^\s*if\s*(set_group_colors(.*"\(\a\+\)",')
 			if !empty(list) && list[1] !=# 'Normal'
 				let item.name = list[1]
 				let item.type = 'gui'
