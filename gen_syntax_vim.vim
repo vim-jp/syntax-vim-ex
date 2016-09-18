@@ -1,8 +1,8 @@
 " Vim syntax file generator
-" Language: Vim 7.4 script
+" Language: Vim script
 " Maintainer: Hirohito Higashi (a.k.a. h_east)  https://github.com/h-east
-" Last Change: Apr 14, 2016
-" Version: 1.0.0
+" Last Change: Sep 18, 2016
+" Version: 1.1.0
 
 let s:keepcpo= &cpo
 set cpo&vim
@@ -158,20 +158,63 @@ function! s:parse_vim_command(cmd)
 				let item.name = lcmd[key][my]
 				let item.type = s:get_vim_command_type(item.name)
 				if omit_idx + 1 < strlen(item.name)
+					let item.omit_idx = omit_idx
 					let item.syn_str = item.name[:omit_idx] . '[' . 
 					\		item.name[omit_idx+1:] . ']'
 				else
+					let item.omit_idx = -1
 					let item.syn_str = item.name
 				endif
 				call add(a:cmd, copy(item))
 			endfor
 		endfor
 
+		" Check exists in the help. (Usually it does not check...)
+		let doc_dir = './vim/runtime/doc'
+		if 1
+			for vimcmd in a:cmd
+				let find_ptn = '^|:' . vimcmd.name . '|\s\+'
+				exec "silent! vimgrep /" . find_ptn . "/gj " . doc_dir . "/index.txt"
+				let li = getqflist()
+				if empty(li)
+					call s:err_sanity(printf('Ex-cmd `:%s` is not found in doc/index.txt.', vimcmd.name))
+				elseif len(li) > 1
+					call s:err_sanity(printf('Ex-cmd `:%s` is duplicated in doc/index.txt.', vimcmd.name))
+				else
+					let doc_syn_str = substitute(li[0].text, find_ptn . '\(\S\+\)\s\+.*', '\1', '')
+					if doc_syn_str ==# vimcmd.syn_str
+						call s:err_sanity(printf('Ex-cmd `%s` short name differ in doc/index.txt. code: `%s`, document: `%s`', vimcmd.name, vimcmd.syn_str, doc_syn_str))
+					endif
+				endif
+
+				if 1
+				for i in range(2)
+					if i || vimcmd.omit_idx >= 0
+						if !i
+							let base_ptn = vimcmd.name[:vimcmd.omit_idx]
+						else
+							let base_ptn = vimcmd.name
+						endif
+						let find_ptn = '\*:' . base_ptn . '\*'
+						exec "silent! vimgrep /" . find_ptn . "/gj " . doc_dir . "/*.txt"
+						let li = getqflist()
+						if empty(li)
+							call s:err_sanity(printf('Ex-cmd `:%s`%s is not found in the help tag.', base_ptn, !i ? ' (short name of `:' . vimcmd.name . '`)' : ''))
+						elseif len(li) > 1
+							call s:err_sanity(printf('Ex-cmd `:%s`%s is duplicated in the help tag.', base_ptn, !i ? ' (short name of `:' . vimcmd.name . '`)' : ''))
+						endif
+					endif
+				endfor
+			endif
+			endfor
+		endif
+
 		" Add weird abbreviations for delete. (See :help :d)
 		for i in ['l', 'p']
 			let str = 'delete'
 			let item.name = str . i
 			let item.type = s:get_vim_command_type(item.name)
+			let item.omit_idx = -1
 			for x in range(strlen(str))
 				let item.syn_str = str[:x] . i
 				if item.syn_str !=# "del"
@@ -613,4 +656,4 @@ endtry
 " ---------------------------------------------------------------------
 let &cpo = s:keepcpo
 unlet s:keepcpo
-" vim:ts=4 sw=4
+" vim:ts=2 sw=2

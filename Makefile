@@ -37,12 +37,12 @@ distclean: clean
 
 vim.vim: vim.vim.rc update_date.vim
 	cp -f vim.vim.rc vim.vim
-	$(RUN_VIM) -c "so update_date.vim"
+	$(RUN_VIM) -S update_date.vim
 	sed -i -e 's/__REVISION__/$(REVISION)/' vim.vim
 
 vim.vim.rc: gen_syntax_vim.vim vim.vim.base $(SRC)
 	rm -f sanity_check.err generator.err
-	$(RUN_VIM) -c "so gen_syntax_vim.vim"
+	$(RUN_VIM) -S gen_syntax_vim.vim
 	@if test -f sanity_check.err ; then \
 		echo ; \
 		echo "Sanity errors:" ; \
