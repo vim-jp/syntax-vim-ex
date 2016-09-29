@@ -171,7 +171,7 @@ function! s:parse_vim_command(cmd)
 
 		" Check exists in the help. (Usually it does not check...)
 		let doc_dir = './vim/runtime/doc'
-		if 1
+		if 0
 			for vimcmd in a:cmd
 				let find_ptn = '^|:' . vimcmd.name . '|\s\+'
 				exec "silent! vimgrep /" . find_ptn . "/gj " . doc_dir . "/index.txt"
