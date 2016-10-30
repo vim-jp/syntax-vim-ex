@@ -2,7 +2,7 @@
 " Language:	Vim 7.4 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Sep 29, 2016
+" Last Change:	Oct 30, 2016
 " Version:	7.4-50
 
 " DO NOT CHANGE DIRECTLY.
@@ -19,7 +19,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2016-09-29T13:39:57+00:00 fb16b37"
+let b:loaded_syntax_vim_ex="2016-10-30T00:11:59+00:00 2376e74"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -291,7 +291,7 @@ endif
 syn case ignore
 syn keyword	vimUserAttrbKey   contained	b[ang] bu[ffer] r[egister] ba[r] n[args] ra[nge] c[ount] com[plete] a[ddr]
 " GEN_SYN_VIM: vimUserAttrbCmplt, START_STR='syn keyword vimUserAttrbCmplt contained', END_STR=''
-syn keyword vimUserAttrbCmplt contained augroup behave buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight history locale mapping menu syntax syntime option packadd shellcmd sign tag tag_listfiles user var
+syn keyword vimUserAttrbCmplt contained augroup behave buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight history locale mapping menu messages syntax syntime option packadd shellcmd sign tag tag_listfiles user var
 syn keyword	vimUserAttrbCmplt contained	custom customlist nextgroup=vimUserAttrbCmpltFunc,vimUserCmdError
 syn match	vimUserAttrbCmpltFunc contained	",\%([sS]:\|<[sS][iI][dD]>\)\=\%(\h\w*\%(#\h\w*\)\+\|\h\w*\)"hs=s+1 nextgroup=vimUserCmdError
 syn keyword	vimUserAttrbAddr	contained	lines arguments buffers loaded_buffers windows tabs
