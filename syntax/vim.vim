@@ -2,7 +2,7 @@
 " Language:	Vim 8.0 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Aug 10, 2017
+" Last Change:	Aug 15, 2017
 " Version:	8.0-02
 " URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
@@ -20,7 +20,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2017-08-10T01:12:10+00:00 4810c97"
+let b:loaded_syntax_vim_ex="2017-08-15T13:07:23+00:00 ff03359"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -67,7 +67,7 @@ syn keyword vimOption contained invwfh invwinfixheight invwfw invwinfixwidth inv
 
 " termcap codes (which can also be set) {{{2
 " GEN_SYN_VIM: vimOption term output code, START_STR='syn keyword vimOption contained', END_STR=''
-syn keyword vimOption contained t_AB t_AF t_AL t_al t_bc t_cd t_ce t_cl t_cm t_Ce t_Co t_CS t_Cs t_cs t_CV t_da t_db t_DL t_dl t_EI t_fs t_IE t_IS t_ke t_ks t_le t_mb t_md t_me t_mr t_ms t_nd t_op t_RB t_RI t_RV t_Sb t_se t_Sf t_SI t_so t_SR t_sr t_te t_ti t_ts t_u7 t_ue t_us t_ut t_vb t_ve t_vi t_vs t_WP t_GP t_WS t_xn t_xs t_ZH t_ZR t_8f t_8b t_BE t_BD
+syn keyword vimOption contained t_AB t_AF t_AL t_al t_bc t_cd t_ce t_cl t_cm t_Ce t_Co t_CS t_Cs t_cs t_CV t_da t_db t_DL t_dl t_EI t_fs t_IE t_SC t_EC t_SH t_IS t_ke t_ks t_le t_mb t_md t_me t_mr t_ms t_nd t_op t_RB t_RI t_RV t_Sb t_se t_Sf t_SI t_so t_SR t_sr t_te t_ti t_ts t_u7 t_ue t_us t_ut t_vb t_ve t_vi t_vs t_WP t_GP t_WS t_xn t_xs t_ZH t_ZR t_8f t_8b t_BE t_BD
 " term key codes
 syn keyword vimOption contained	t_F1 t_F2 t_F3 t_F4 t_F5 t_F6 t_F7 t_F8 t_F9 t_k1 t_K1 t_k2 t_k3 t_K3 t_k4 t_K4 t_k5 t_K5 t_k6 t_K6 t_k7 t_K7 t_k8 t_K8 t_k9 t_K9 t_KA t_kb t_kB t_KB t_KC t_kd t_kD t_KD t_KE t_KF t_KG t_kh t_KH t_kI t_KI t_KJ t_KK t_kl t_KL t_kN t_kP t_kr t_ku
 syn match   vimOption contained	"t_%1"
@@ -96,7 +96,7 @@ syn keyword vimGroup contained	Comment Constant String Character Number Boolean 
 
 " Default highlighting groups {{{2
 " GEN_SYN_VIM: vimHLGroup, START_STR='syn keyword vimHLGroup contained', END_STR=''
-syn keyword vimHLGroup contained ErrorMsg IncSearch ModeMsg NonText StatusLine StatusLineNC StatusLineTerm EndOfBuffer VertSplit VisualNOS DiffText PmenuSbar TabLineSel TabLineFill Cursor lCursor QuickFixLine Directory LineNr CursorLineNr MoreMsg Question Search SpellBad SpellCap SpellRare SpellLocal PmenuThumb Pmenu PmenuSel SpecialKey Title WarningMsg WildMenu Folded FoldColumn SignColumn Visual DiffAdd DiffChange DiffDelete TabLine CursorColumn CursorLine ColorColumn Conceal MatchParen Normal Menu Tooltip Scrollbar CursorIM
+syn keyword vimHLGroup contained ErrorMsg IncSearch ModeMsg NonText StatusLine StatusLineNC EndOfBuffer VertSplit VisualNOS DiffText PmenuSbar TabLineSel TabLineFill Cursor lCursor QuickFixLine Directory LineNr CursorLineNr MoreMsg Question Search SpellBad SpellCap SpellRare SpellLocal PmenuThumb Pmenu PmenuSel SpecialKey Title WarningMsg WildMenu Folded FoldColumn SignColumn Visual DiffAdd DiffChange DiffDelete TabLine CursorColumn CursorLine ColorColumn Conceal MatchParen Normal StatusLineTerm StatusLineTermNC Menu Tooltip Scrollbar CursorIM
 syn case match
 
 " Function Names {{{2
@@ -104,8 +104,8 @@ syn case match
 syn keyword vimFuncName contained abs acos add and append argc argidx arglistid argv asin assert_equal assert_exception assert_fails assert_false assert_inrange assert_match assert_notequal assert_notmatch assert_report assert_true atan atan2 balloon_show browse browsedir bufexists buflisted bufloaded bufname bufnr bufwinid bufwinnr byte2line byteidx byteidxcomp call ceil ch_canread ch_close ch_close_in ch_evalexpr ch_evalraw ch_getbufnr ch_getjob ch_info ch_log ch_logfile ch_open ch_read ch_readraw ch_sendexpr ch_sendraw ch_setoptions ch_status changenr char2nr cindent clearmatches col complete complete_add complete_check confirm copy cos cosh count cscope_connection cursor deepcopy delete did_filetype diff_filler diff_hlID empty escape eval eventhandler executable
 syn keyword vimFuncName contained execute exepath exists exp expand extend feedkeys filereadable filewritable filter finddir findfile float2nr floor fmod fnameescape fnamemodify foldclosed foldclosedend foldlevel foldtext foldtextresult foreground funcref function garbagecollect get getbufinfo getbufline getbufvar getchar getcharmod getcharsearch getcmdline getcmdpos getcmdtype getcmdwintype getcompletion getcurpos getcwd getfontname getfperm getfsize getftime getftype getline getloclist getmatches getpid getpos getqflist getreg getregtype gettabinfo gettabvar gettabwinvar getwininfo getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog
 syn keyword vimFuncName contained inputlist inputrestore inputsave inputsecret insert invert isdirectory islocked isnan items job_getchannel job_info job_setoptions job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or pathshorten perleval pow prevnonblank printf pumvisible py3eval pyeval pyxeval range readfile reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remote_startserver remove rename repeat resolve reverse round screenattr screenchar screencol screenrow
-syn keyword vimFuncName contained search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufvar setcharsearch setcmdpos setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart strridx strtrans strwidth submatch substitute synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty term_list term_scrape
-syn keyword vimFuncName contained term_sendkeys term_start term_wait test_alloc_fail test_autochdir test_garbagecollect_now test_ignore_error test_null_channel test_null_dict test_null_job test_null_list test_null_partial test_null_string test_override test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win winbufnr wincol winheight winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
+syn keyword vimFuncName contained search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufvar setcharsearch setcmdpos setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart strridx strtrans strwidth submatch substitute synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_getaltscreen term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty
+syn keyword vimFuncName contained term_list term_scrape term_sendkeys term_start term_wait test_alloc_fail test_autochdir test_garbagecollect_now test_ignore_error test_null_channel test_null_dict test_null_job test_null_list test_null_partial test_null_string test_override test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win winbufnr wincol winheight winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
 
 "--- syntax here and above generated by mkvimvim ---
 " Special Vim Highlighting (not automatic) {{{1
