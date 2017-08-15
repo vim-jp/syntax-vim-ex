@@ -373,9 +373,9 @@ function! s:parse_vim_hlgroup(li)
 		new
 		exec 'read ' . file_name
 		call cursor(1, 1)
-		exec '/^static\s\+char\s\+\*(highlight_init_both\[\])\s*=$/+1;/^\s*};/-1yank a'
-		exec '/^static\s\+char\s\+\*(highlight_init_light\[\])\s*=$/+1;/^\s*};/-1yank b'
-		"exec '/^static\s\+char\s\+\*(highlight_init_dark\[\])\s*=$/+1;/^\s*};/-1yank c'
+		exec '/^static\s\+char\s\+\*(highlight_init_both\[\])\s*=\%(\s*{\)$/+1;/^\s*};/-1yank a'
+		exec '/^static\s\+char\s\+\*(highlight_init_light\[\])\s*=\%(\s*{\)$/+1;/^\s*};/-1yank b'
+		"exec '/^static\s\+char\s\+\*(highlight_init_dark\[\])\s*=\%(\s*{\)$/+1;/^\s*};/-1yank c'
 		exec '/^set_normal_colors(\%(void\)\?)$/+1;/^}$/-1yank d'
 		%delete _
 		put a
