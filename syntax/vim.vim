@@ -2,7 +2,7 @@
 " Language:	Vim 8.0 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Aug 16, 2017
+" Last Change:	Aug 17, 2017
 " Version:	8.0-02
 " URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
@@ -20,7 +20,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2017-08-16T04:52:28+00:00 761b082"
+let b:loaded_syntax_vim_ex="2017-08-17T00:16:44+00:00 1b30430"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -49,7 +49,7 @@ syn keyword vimOption contained fdl foldlevel fdls foldlevelstart fmr foldmarker
 syn keyword vimOption contained isp isprint js joinspaces key kmp keymap km keymodel kp keywordprg lmap langmap lm langmenu lnr langnoremap lrm langremap ls laststatus lz lazyredraw lbr linebreak lines lsp linespace lisp lw lispwords list lcs listchars lpl loadplugins luadll macatsui magic mef makeef menc makeencoding mp makeprg mps matchpairs mat matchtime mco maxcombine mfd maxfuncdepth mmd maxmapdepth mm maxmem mmp maxmempattern mmt maxmemtot mis menuitems msm mkspellmem ml modeline mls modelines ma modifiable mod modified more mouse mousef mousefocus mh mousehide mousem mousemodel mouses mouseshape mouset mousetime mzq mzquantum nf nrformats nu number nuw numberwidth ofu omnifunc odev opendevice opfunc operatorfunc pp packpath para paragraphs paste pt pastetoggle
 syn keyword vimOption contained pex patchexpr pm patchmode pa path perldll pi preserveindent pvh previewheight pvw previewwindow pdev printdevice penc printencoding pexpr printexpr pfn printfont pheader printheader pmbcs printmbcharset pmbfn printmbfont popt printoptions prompt ph pumheight pythonthreedll pythondll pyx pyxversion qe quoteescape ro readonly rdt redrawtime re regexpengine rnu relativenumber remap rop renderoptions report rs restorescreen ri revins rl rightleft rlc rightleftcmd rubydll ru ruler ruf rulerformat rtp runtimepath scr scroll scb scrollbind sj scrolljump so scrolloff sbo scrollopt sect sections secure sel selection slm selectmode ssop sessionoptions sh shell shcf shellcmdflag sp shellpipe shq shellquote srr shellredir ssl shellslash stmp shelltemp
 syn keyword vimOption contained st shelltype sxq shellxquote sxe shellxescape sr shiftround sw shiftwidth shm shortmess sn shortname sbr showbreak sc showcmd sft showfulltag sm showmatch smd showmode stal showtabline ss sidescroll siso sidescrolloff scl signcolumn scs smartcase si smartindent sta smarttab sts softtabstop spell spc spellcapcheck spf spellfile spl spelllang sps spellsuggest sb splitbelow spr splitright sol startofline stl statusline su suffixes sua suffixesadd swf swapfile sws swapsync swb switchbuf smc synmaxcol syn syntax tal tabline tpm tabpagemax ts tabstop tbs tagbsearch tc tagcase tl taglength tr tagrelative tag tags tgst tagstack tcldll term tbidi termbidi tenc termencoding tgc termguicolors tk termkey tms termsize terse ta textauto tx textmode
-syn keyword vimOption contained tw textwidth tsr thesaurus top tildeop to timeout tm timeoutlen title titlelen titleold titlestring tb toolbar tbis toolbariconsize ttimeout ttm ttimeoutlen tbi ttybuiltin tf ttyfast ttym ttymouse tsl ttyscroll tty ttytype udir undodir udf undofile ul undolevels ur undoreload uc updatecount ut updatetime vbs verbose vfile verbosefile vdir viewdir vop viewoptions vi viminfo vif viminfofile ve virtualedit vb visualbell warn wiv weirdinvert ww whichwrap wc wildchar wcm wildcharm wig wildignore wic wildignorecase wmnu wildmenu wim wildmode wop wildoptions wak winaltkeys wi window wh winheight wfh winfixheight wfw winfixwidth wmh winminheight wmw winminwidth wiw winwidth wrap wm wrapmargin ws wrapscan write wa writeany wb writebackup
+syn keyword vimOption contained tw textwidth tsr thesaurus top tildeop to timeout tm timeoutlen title titlelen titleold titlestring tb toolbar tbis toolbariconsize ttimeout ttm ttimeoutlen tbi ttybuiltin tf ttyfast ttym ttymouse tsl ttyscroll tty ttytype udir undodir udf undofile ul undolevels ur undoreload uc updatecount ut updatetime vbs verbose vfile verbosefile vdir viewdir vop viewoptions vi viminfo vif viminfofile ve virtualedit vb visualbell warn wiv weirdinvert ww whichwrap wc wildchar wcm wildcharm wig wildignore wic wildignorecase wmnu wildmenu wim wildmode wop wildoptions wak winaltkeys wi window wh winheight wfh winfixheight wfw winfixwidth wmh winminheight wmw winminwidth winptydll wiw winwidth wrap wm wrapmargin ws wrapscan write wa writeany wb writebackup
 syn keyword vimOption contained wd writedelay
 
 " vimOptions: These are the turn-off setting variants {{{2
