@@ -2,7 +2,7 @@
 " Language:	Vim 8.0 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Last Change:	Mar 22, 2018
+" Last Change:	Mar 30, 2018
 " Version:	8.0-02
 " URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
@@ -20,7 +20,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2018-03-22T23:36:43+00:00 6c8f38b"
+let b:loaded_syntax_vim_ex="2018-03-30T05:57:17+00:00 c0c190b"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -280,22 +280,22 @@ syn cluster	vimUserCmdList	contains=vimAddress,vimSyntax,vimHighlight,vimAutoCmd
 syn keyword	vimUserCommand	contained	com[mand]
 syn match	vimUserCmd	"\<com\%[mand]!\=\>.*$"	contains=vimUserAttrb,vimUserAttrbError,vimUserCommand,@vimUserCmdList
 syn match	vimUserAttrbError	contained	"-\a\+\ze\s"
-syn match	vimUserAttrb	contained	"-n\%[args]=[01*?+]"	contains=vimUserAttrbKey,vimOper
-syn match	vimUserAttrb	contained	"-com\%[plete]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbCmplt,vimUserCmdError
-syn match	vimUserAttrb	contained	"-a\%[ddr]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbAddr,vimUserCmdError
-syn match	vimUserAttrb	contained	"-ra\%[nge]\(=%\|=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
-syn match	vimUserAttrb	contained	"-c\%[ount]\(=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-b\%[ang]\>"		contains=vimOper,vimUserAttrbKey
-syn match	vimUserAttrb	contained	"-ba\%[r]\>"		contains=vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-bu\%[ffer]\>"		contains=vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-r\%[egister]\>"		contains=vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-ba\%[r]\>"		contains=vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-n\%[args]=[01*?+]"	contains=vimUserAttrbKey,vimOper
+syn match	vimUserAttrb	contained	"-ra\%[nge]\(=%\|=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-c\%[ount]\(=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-com\%[plete]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbCmplt,vimUserCmdError
+syn match	vimUserAttrb	contained	"-a\%[ddr]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbAddr,vimUserCmdError
 if !exists("g:vimsyn_noerror") && !exists("g:vimsyn_nousercmderror")
  syn match	vimUserCmdError	contained	"\S\+\>"
 endif
 syn case ignore
 syn keyword	vimUserAttrbKey   contained	b[ang] bu[ffer] r[egister] ba[r] n[args] ra[nge] c[ount] com[plete] a[ddr]
 " GEN_SYN_VIM: vimUserAttrbCmplt, START_STR='syn keyword vimUserAttrbCmplt contained', END_STR=''
-syn keyword vimUserAttrbCmplt contained augroup behave buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight history locale mapclear mapping menu messages syntax syntime option packadd shellcmd sign tag tag_listfiles user var
+syn keyword vimUserAttrbCmplt contained arglist augroup behave buffer color command compiler cscope dir environment event expression file file_in_path filetype function help highlight history locale mapclear mapping menu messages syntax syntime option packadd shellcmd sign tag tag_listfiles user var
 syn keyword	vimUserAttrbCmplt contained	custom customlist nextgroup=vimUserAttrbCmpltFunc,vimUserCmdError
 syn match	vimUserAttrbCmpltFunc contained	",\%([sS]:\|<[sS][iI][dD]>\)\=\%(\h\w*\%(#\h\w*\)\+\|\h\w*\)"hs=s+1 nextgroup=vimUserCmdError
 syn keyword	vimUserAttrbAddr	contained	lines arguments buffers loaded_buffers windows tabs
