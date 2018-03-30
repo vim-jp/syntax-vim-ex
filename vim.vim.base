@@ -246,15 +246,15 @@ syn cluster	vimUserCmdList	contains=vimAddress,vimSyntax,vimHighlight,vimAutoCmd
 syn keyword	vimUserCommand	contained	com[mand]
 syn match	vimUserCmd	"\<com\%[mand]!\=\>.*$"	contains=vimUserAttrb,vimUserAttrbError,vimUserCommand,@vimUserCmdList
 syn match	vimUserAttrbError	contained	"-\a\+\ze\s"
-syn match	vimUserAttrb	contained	"-n\%[args]=[01*?+]"	contains=vimUserAttrbKey,vimOper
-syn match	vimUserAttrb	contained	"-com\%[plete]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbCmplt,vimUserCmdError
-syn match	vimUserAttrb	contained	"-a\%[ddr]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbAddr,vimUserCmdError
-syn match	vimUserAttrb	contained	"-ra\%[nge]\(=%\|=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
-syn match	vimUserAttrb	contained	"-c\%[ount]\(=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-b\%[ang]\>"		contains=vimOper,vimUserAttrbKey
-syn match	vimUserAttrb	contained	"-ba\%[r]\>"		contains=vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-bu\%[ffer]\>"		contains=vimOper,vimUserAttrbKey
 syn match	vimUserAttrb	contained	"-r\%[egister]\>"		contains=vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-ba\%[r]\>"		contains=vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-n\%[args]=[01*?+]"	contains=vimUserAttrbKey,vimOper
+syn match	vimUserAttrb	contained	"-ra\%[nge]\(=%\|=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-c\%[ount]\(=\d\+\)\="	contains=vimNumber,vimOper,vimUserAttrbKey
+syn match	vimUserAttrb	contained	"-com\%[plete]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbCmplt,vimUserCmdError
+syn match	vimUserAttrb	contained	"-a\%[ddr]="	contains=vimUserAttrbKey,vimOper nextgroup=vimUserAttrbAddr,vimUserCmdError
 if !exists("g:vimsyn_noerror") && !exists("g:vimsyn_nousercmderror")
  syn match	vimUserCmdError	contained	"\S\+\>"
 endif
