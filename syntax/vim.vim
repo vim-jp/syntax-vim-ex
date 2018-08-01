@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2018-08-01T13:17:18+00:00 153b37e"
+let b:loaded_syntax_vim_ex="2018-08-01T14:51:19+00:00 0c2da99"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -41,6 +41,7 @@ syn keyword vimCommand contained tma[p] tmapc[lear] tn[ext] tno[remap] to[pleft]
 
 syn match   vimCommand contained	"\<z[-+^.=]\=\>"
 syn keyword vimStdPlugin contained	DiffOrig Man S TOhtml XMLent XMLns 
+syn keyword vimStdPlugin contained	Arguments Break Clear Continue DiffOrig Evaluate Finish Gdb Man Over Program Run S Source Step Stop Termdebug TermdebugCommand TOhtml Winbar XMLent XMLns
 
 " vimOptions are caught only when contained in a vimSet {{{2
 " GEN_SYN_VIM: vimOption normal, START_STR='syn keyword vimOption contained', END_STR=''
@@ -192,7 +193,7 @@ syn match vimNumber	"\%(^\|\A\)\zs#\x\{6}"             	       skipwhite nextgro
 
 " All vimCommands are contained by vimIsCommands. {{{2
 syn match vimCmdSep	"[:|]\+"	skipwhite nextgroup=vimAddress,vimAutoCmd,vimEcho,vimIsCommand,vimExtCmd,vimFilter,vimLet,vimMap,vimMark,vimSet,vimSyntax,vimUserCmd
-syn match vimIsCommand	"\<\h\w*\>"	contains=vimCommand
+syn match vimIsCommand	"\<\h\w*\>"	contains=vimCommand,vimStdPlugin
 syn match vimVar	      contained	"\<\h[a-zA-Z0-9#_]*\>"
 syn match vimVar		"\<[bwglstav]:\h[a-zA-Z0-9#_]*\>"
 syn match vimVar	      	"\s\zs&\a\+\>"
@@ -457,7 +458,7 @@ syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\(bslash\|plug\|sid\|space\|bar\|nop\
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)C-R>[0-9a-z"%#:.\-=]'he=e-1			contains=vimBracket
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)\%(q-\)\=\(args\|bang\|count\|line[12]\|lt\|reg\|register\|mods\)>'	contains=vimBracket
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)f-\(mods\|args\)>'	contains=vimBracket
-syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\([cas]file\|abuf\|amatch\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
+syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\([cas]file\|abuf\|amatch\|cexpr\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
 syn match	vimBracket contained	"[\\<>]"
 syn case match
 
@@ -958,6 +959,7 @@ if !exists("skip_vim_syntax_inits")
  hi def link vimSpecFileMod	vimSpecFile
  hi def link vimSpecial	Type
  hi def link vimStatement	Statement
+ hi def link vimStdPlugin           vimCommand
  hi def link vimStringCont	vimString
  hi def link vimString	String
  hi def link vimStringEnd	vimString
