@@ -417,7 +417,7 @@ syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\(bslash\|plug\|sid\|space\|bar\|nop\
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)C-R>[0-9a-z"%#:.\-=]'he=e-1			contains=vimBracket
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)\%(q-\)\=\(args\|bang\|count\|line[12]\|lt\|reg\|register\|mods\)>'	contains=vimBracket
 syn match	vimNotation	'\%#=1\(\\\=<\|<lt>\)f-\(mods\|args\)>'	contains=vimBracket
-syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\([cas]file\|abuf\|amatch\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
+syn match	vimNotation	"\%#=1\(\\\=<\|<lt>\)\([cas]file\|abuf\|amatch\|cexpr\|cword\|cWORD\|slnum\|client\)>"		contains=vimBracket
 syn match	vimBracket contained	"[\\<>]"
 syn case match
 
