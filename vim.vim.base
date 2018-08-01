@@ -34,7 +34,6 @@ syn cluster vimCommentGroup	contains=vimTodo,@Spell
 " GEN_SYN_VIM: vimCommand normal, START_STR='syn keyword vimCommand contained', END_STR=''
 
 syn match   vimCommand contained	"\<z[-+^.=]\=\>"
-syn keyword vimStdPlugin contained	DiffOrig Man S TOhtml XMLent XMLns 
 syn keyword vimStdPlugin contained	Arguments Break Clear Continue DiffOrig Evaluate Finish Gdb Man Over Program Run S Source Step Stop Termdebug TermdebugCommand TOhtml Winbar XMLent XMLns
 
 " vimOptions are caught only when contained in a vimSet {{{2
