@@ -159,7 +159,7 @@ syn match vimNumber	"\%(^\|\A\)\zs#\x\{6}"             	       skipwhite nextgro
 
 " All vimCommands are contained by vimIsCommands. {{{2
 syn match vimCmdSep	"[:|]\+"	skipwhite nextgroup=vimAddress,vimAutoCmd,vimEcho,vimIsCommand,vimExtCmd,vimFilter,vimLet,vimMap,vimMark,vimSet,vimSyntax,vimUserCmd
-syn match vimIsCommand	"\<\h\w*\>"	contains=vimCommand
+syn match vimIsCommand	"\<\h\w*\>"	contains=vimCommand,vimStdPlugin
 syn match vimVar	      contained	"\<\h[a-zA-Z0-9#_]*\>"
 syn match vimVar		"\<[bwglstav]:\h[a-zA-Z0-9#_]*\>"
 syn match vimVar	      	"\s\zs&\a\+\>"
@@ -919,6 +919,7 @@ if !exists("skip_vim_syntax_inits")
  hi def link vimSpecFileMod	vimSpecFile
  hi def link vimSpecial	Type
  hi def link vimStatement	Statement
+ hi def link vimStdPlugin           vimCommand
  hi def link vimStringCont	vimString
  hi def link vimString	String
  hi def link vimStringEnd	vimString
