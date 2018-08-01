@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2018-08-01T14:51:19+00:00 0c2da99"
+let b:loaded_syntax_vim_ex="2018-08-01T23:57:55+00:00 5736c87"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -40,7 +40,6 @@ syn keyword vimCommand contained sbN[ext] sba[ll] sbf[irst] sbl[ast] sbm[odified
 syn keyword vimCommand contained tma[p] tmapc[lear] tn[ext] tno[remap] to[pleft] tp[revious] tr[ewind] try ts[elect] tu[nmenu] tunma[p] u[ndo] undoj[oin] undol[ist] una[bbreviate] unh[ide] unl[et] unlo[ckvar] uns[ilent] up[date] v[global] ve[rsion] verb[ose] vert[ical] vi[sual] vie[w] vim[grep] vimgrepa[dd] viu[sage] vne[w] vs[plit] w[rite] wN[ext] wa[ll] wh[ile] wi[nsize] winc[md] wind[o] winp[os] wn[ext] wp[revious] wq wqa[ll] ws[verb] wu[ndo] wv[iminfo] x[it] xa[ll] y[ank] z N[ext] P[rint] X dl dell delel deletl deletel dp dep delp delep deletp deletep
 
 syn match   vimCommand contained	"\<z[-+^.=]\=\>"
-syn keyword vimStdPlugin contained	DiffOrig Man S TOhtml XMLent XMLns 
 syn keyword vimStdPlugin contained	Arguments Break Clear Continue DiffOrig Evaluate Finish Gdb Man Over Program Run S Source Step Stop Termdebug TermdebugCommand TOhtml Winbar XMLent XMLns
 
 " vimOptions are caught only when contained in a vimSet {{{2
