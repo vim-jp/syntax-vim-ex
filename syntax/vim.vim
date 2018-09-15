@@ -2,7 +2,7 @@
 " Language:	Vim 8.1 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Aug 22, 2018
+" Last Change:	Sep 15, 2018
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
 " Base File Version: 8.0-19
 " Base File URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2018-08-22T15:26:37+00:00 1f4329c"
+let b:loaded_syntax_vim_ex="2018-09-15T00:03:39+00:00 23a268b"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -106,8 +106,8 @@ syn keyword vimFuncName contained abs acos add and append appendbufline argc arg
 syn keyword vimFuncName contained did_filetype diff_filler diff_hlID empty escape eval eventhandler executable execute exepath exists exp expand extend feedkeys filereadable filewritable filter finddir findfile float2nr floor fmod fnameescape fnamemodify foldclosed foldclosedend foldlevel foldtext foldtextresult foreground funcref function garbagecollect get getbufinfo getbufline getbufvar getchangelist getchar getcharmod getcharsearch getcmdline getcmdpos getcmdtype getcmdwintype getcompletion getcurpos getcwd getfontname getfperm getfsize getftime getftype getjumplist getline getloclist getmatches getpid getpos getqflist getreg getregtype gettabinfo gettabvar gettabwinvar getwininfo getwinpos getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key
 syn keyword vimFuncName contained haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog inputlist inputrestore inputsave inputsecret insert invert isdirectory islocked isnan items job_getchannel job_info job_setoptions job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or pathshorten perleval pow prevnonblank printf prompt_setcallback prompt_setinterrupt prompt_setprompt pumvisible py3eval pyeval pyxeval range readfile reg_executing reg_recording
 syn keyword vimFuncName contained reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remote_startserver remove rename repeat resolve reverse round screenattr screenchar screencol screenrow search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufline setbufvar setcharsearch setcmdpos setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar setwinvar sha256 shellescape shiftwidth simplify sin sinh sort soundfold spellbadword spellsuggest split sqrt str2float str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart strridx strtrans strwidth submatch substitute swapinfo synID synIDattr synIDtrans synconcealed synstack system systemlist
-syn keyword vimFuncName contained tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_dumpdiff term_dumpload term_dumpwrite term_getaltscreen term_getansicolors term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty term_list term_scrape term_sendkeys term_setansicolors term_setkill term_setrestore term_setsize term_start term_wait test_alloc_fail test_autochdir test_feedinput test_garbagecollect_now test_ignore_error test_null_channel test_null_dict test_null_job test_null_list test_null_partial test_null_string test_override test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trim trunc type undofile undotree uniq values virtcol
-syn keyword vimFuncName contained visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win win_screenpos winbufnr wincol winheight winlayout winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
+syn keyword vimFuncName contained tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_dumpdiff term_dumpload term_dumpwrite term_getaltscreen term_getansicolors term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty term_list term_scrape term_sendkeys term_setansicolors term_setkill term_setrestore term_setsize term_start term_wait test_alloc_fail test_autochdir test_feedinput test_garbagecollect_now test_ignore_error test_null_channel test_null_dict test_null_job test_null_list test_null_partial test_null_string test_option_not_set test_override test_scrollbar test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trim trunc type
+syn keyword vimFuncName contained undofile undotree uniq values virtcol visualmode wildmenumode win_findbuf win_getid win_gotoid win_id2tabwin win_id2win win_screenpos winbufnr wincol winheight winlayout winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
 
 "--- syntax here and above generated by mkvimvim ---
 " Special Vim Highlighting (not automatic) {{{1
