@@ -2,9 +2,9 @@
 " Language:	Vim 8.1 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Nov 12, 2018
+" Last Change:	Nov 25, 2018
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Base File Version: 8.0-19
+" Base File Version: 8.0-20
 " Base File URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
 " DO NOT CHANGE DIRECTLY.
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2018-11-12T01:26:04+00:00 40b1df0"
+let b:loaded_syntax_vim_ex="2018-11-25T23:12:28+00:00 7e6e7a6"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -324,7 +324,7 @@ syn match	vimEnvvar	"\${\I\i*}"
 syn region	vimEscapeBrace	oneline   contained transparent start="[^\\]\(\\\\\)*\[\zs\^\=\]\=" skip="\\\\\|\\\]" end="]"me=e-1
 syn match	vimPatSepErr	contained	"\\)"
 syn match	vimPatSep	contained	"\\|"
-syn region	vimPatSepZone	oneline   contained   matchgroup=vimPatSepZ start="\\%\=\ze(" skip="\\\\" end="\\)\|[^\]['"]"	contains=@vimStringGroup
+syn region	vimPatSepZone	oneline   contained   matchgroup=vimPatSepZ start="\\%\=\ze(" skip="\\\\" end="\\)\|[^\\]['"]"	contains=@vimStringGroup
 syn region	vimPatRegion	contained transparent matchgroup=vimPatSepR start="\\[z%]\=(" end="\\)"	contains=@vimSubstList oneline
 syn match	vimNotPatSep	contained	"\\\\"
 syn cluster	vimStringGroup	contains=vimEscapeBrace,vimPatSep,vimNotPatSep,vimPatSepErr,vimPatSepZone,@Spell
