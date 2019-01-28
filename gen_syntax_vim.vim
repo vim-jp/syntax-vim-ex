@@ -301,7 +301,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_event(li)
 	try
-		let file_name = $VIM_SRCDIR . '/fileio.c'
+		let file_name = $VIM_SRCDIR . '/autocmd.c'
 		let item = {}
 
 		new
