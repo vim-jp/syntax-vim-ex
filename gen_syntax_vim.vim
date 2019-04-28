@@ -428,7 +428,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_complete_name(li)
 	try
-		let file_name = $VIM_SRCDIR . '/ex_docmd.c'
+		let file_name = $VIM_SRCDIR . '/usercmd.c'
 		let item = {}
 
 		new
