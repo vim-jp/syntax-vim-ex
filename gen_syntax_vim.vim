@@ -380,7 +380,7 @@ function! s:parse_vim_hlgroup(li)
 		%delete _
 		put a
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^\s*"\%(\l\+\s\+\)*\(\a*\)[^"]*")\?,')
+			let list = matchlist(line, '^\s*\%(CENT(\)\?"\%(default\s\+link\s\+\)\?\(\a\+\).*",.*')
 			if !empty(list)
 				let item.name = list[1]
 				let item.type = 'both'
@@ -391,7 +391,7 @@ function! s:parse_vim_hlgroup(li)
 		%delete _
 		put b
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^\s*"\%(\l\+\s\+\)*\(\a*\)[^"]*")\?,')
+			let list = matchlist(line, '^\s*\%(CENT(\)\?"\%(default\s\+link\s\+\)\?\(\a\+\).*",.*')
 			if !empty(list)
 				let item.name = list[1]
 				let item.type = 'light'
