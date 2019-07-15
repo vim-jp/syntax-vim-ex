@@ -108,7 +108,7 @@ function! s:parse_vim_command(cmd)
 		exec '/^}\?\s*cmdnames\[\]\s*=\s*$/+1;/^};/-1yank'
 		%delete _
 		put
-		g!/^EX(/d
+		g!/^EXCMD(/d
 
 		let lcmd = {}
 		for key in range(char2nr('a'), char2nr('z'))
@@ -117,7 +117,7 @@ function! s:parse_vim_command(cmd)
 		let lcmd['~'] = []
 
 		for line in getline(1, line('$'))
-			let list = matchlist(line, '^EX(\w\+\s*,\s*"\(\a\w*\)"\s*,')
+			let list = matchlist(line, '^EXCMD(\w\+\s*,\s*"\(\a\w*\)"\s*,')
 			if !empty(list)
 				" Small ascii character or other.
 				let key = (list[1][:0] =~# '\l') ? list[1][:0] : '~'
@@ -367,7 +367,7 @@ endfunc
 " ------------------------------------------------------------------------------
 function! s:parse_vim_hlgroup(li)
 	try
-		let file_name = $VIM_SRCDIR . '/syntax.c'
+		let file_name = $VIM_SRCDIR . '/highlight.c'
 		let item = {}
 
 		new
