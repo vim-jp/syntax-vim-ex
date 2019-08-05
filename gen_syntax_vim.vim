@@ -339,12 +339,13 @@ function! s:parse_vim_function(li)
 		new
 		exec 'read ' . file_name
 		norm! gg
-		exec '/^}\s*functions\[\]\s*=\s*$/+1;/^};/-1yank'
+		exec '/^static\s\+funcentry_T\s\+global_functions\[\]\s*=\s*$/+1;/^};/-1yank'
 		%delete _
 
 		put
 		g!/^\s*{\s*"\w\+"\s*,.*$/d
 		g/^\s*{\s*"test"\s*,.*$/d
+		g@//\s*obsolete@d
 		g@/\*\s*obsolete\s*\*/@d
 
 		for line in getline(1, line('$'))
