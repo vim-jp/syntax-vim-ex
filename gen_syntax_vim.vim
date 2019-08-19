@@ -132,9 +132,20 @@ function! s:parse_vim_command(cmd)
 				if my > 0
 					let omit_idx = (key =~# '\l') ? 1 : 0
 					for idx in range(1, strlen(lcmd[key][my]))
+            let spec=0
+            if lcmd[key][my] ==# 'ex'
+              let spec=1
+              echo "cmd name:" lcmd[key][my]
+            endif
 						let matched = 0
 						for pre in range(my - 1, 0, -1)
+              if spec
+                echo "pre:" pre ", my:" my
+              endif
 							if pre == my
+                if spec
+                  echo "continue"
+                endif
 								continue
 							endif
 							" for weird abbreviations for delete. (See :help :d)
@@ -146,10 +157,16 @@ function! s:parse_vim_command(cmd)
 							\		lcmd[key][my][:idx] =~# '^k[a-zA-Z]$')
 								let matched = 1
 								let omit_idx = idx + 1
+                if spec
+                  echo "match. break. omit_idx:" omit_idx
+                endif
 								break
 							endif
 						endfor
 						if !matched
+              if spec
+                echo "not match. break"
+              endif
 							break
 						endif
 					endfor
