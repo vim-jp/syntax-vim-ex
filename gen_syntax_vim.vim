@@ -11,7 +11,7 @@ language C
 
 function! s:parse_vim_option(opt, missing_opt, term_out_code)
 	try
-		let file_name = $VIM_SRCDIR . '/option.c'
+		let file_name = $VIM_SRCDIR . '/optiondefs.h'
 		let item = {}
 
 		new
