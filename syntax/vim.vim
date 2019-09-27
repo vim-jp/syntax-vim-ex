@@ -2,7 +2,7 @@
 " Language:	Vim 8.1 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Sep 16, 2019
+" Last Change:	Sep 27, 2019
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
 " Base File Version: 8.0-20
 " Base File URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2019-09-16T23:41:47+00:00 22ee4fb"
+let b:loaded_syntax_vim_ex="2019-09-27T04:20:41+00:00 2e9ad75"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -107,8 +107,8 @@ syn keyword vimFuncName contained count cscope_connection cursor debugbreak deep
 syn keyword vimFuncName contained gettabwinvar gettagstack getwininfo getwinpos getwinposx getwinposy getwinvar glob glob2regpat globpath has has_key haslocaldir hasmapto histadd histdel histget histnr hlID hlexists hostname iconv indent index input inputdialog inputlist inputrestore inputsave inputsecret insert invert isdirectory isinf islocked isnan items job_getchannel job_info job_setoptions job_start job_status job_stop join js_decode js_encode json_decode json_encode keys len libcall libcallnr line line2byte lispindent list2str listener_add listener_flush listener_remove localtime log log10 luaeval map maparg mapcheck match matchadd matchaddpos matcharg matchdelete matchend matchlist matchstr matchstrpos max min mkdir mode mzeval nextnonblank nr2char or
 syn keyword vimFuncName contained pathshorten perleval popup_atcursor popup_beval popup_clear popup_close popup_create popup_dialog popup_filter_menu popup_filter_yesno popup_findinfo popup_findpreview popup_getoptions popup_getpos popup_hide popup_locate popup_menu popup_move popup_notification popup_setoptions popup_settext popup_show pow prevnonblank printf prompt_setcallback prompt_setinterrupt prompt_setprompt prop_add prop_clear prop_list prop_remove prop_type_add prop_type_change prop_type_delete prop_type_get prop_type_list pum_getpos pumvisible py3eval pyeval pyxeval range readdir readfile reg_executing reg_recording reltime reltimefloat reltimestr remote_expr remote_foreground remote_peek remote_read remote_send remote_startserver remove rename repeat
 syn keyword vimFuncName contained resolve reverse round rubyeval screenattr screenchar screenchars screencol screenpos screenrow screenstring search searchdecl searchpair searchpairpos searchpos server2client serverlist setbufline setbufvar setcharsearch setcmdpos setenv setfperm setline setloclist setmatches setpos setqflist setreg settabvar settabwinvar settagstack setwinvar sha256 shellescape shiftwidth sign_define sign_getdefined sign_getplaced sign_jump sign_place sign_placelist sign_undefine sign_unplace sign_unplacelist simplify sin sinh sort sound_clear sound_playevent sound_playfile sound_stop soundfold spellbadword spellsuggest split sqrt state str2float str2list str2nr strcharpart strchars strdisplaywidth strftime strgetchar stridx string strlen strpart
-syn keyword vimFuncName contained strridx strtrans strwidth submatch substitute swapinfo swapname synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_dumpdiff term_dumpload term_dumpwrite term_getaltscreen term_getansicolors term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty term_list term_scrape term_sendkeys term_setansicolors term_setkill term_setrestore term_setsize term_start term_wait test_alloc_fail test_autochdir test_feedinput test_garbagecollect_now test_garbagecollect_soon test_getvalue test_ignore_error test_null_blob test_null_channel test_null_dict test_null_job test_null_list test_null_partial
-syn keyword vimFuncName contained test_null_string test_option_not_set test_override test_refcount test_scrollbar test_setmouse test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trim trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_execute win_findbuf win_getid win_gotoid win_id2tabwin win_id2win win_screenpos win_splitmove winbufnr wincol winheight winlayout winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
+syn keyword vimFuncName contained strridx strtrans strwidth submatch substitute swapinfo swapname synID synIDattr synIDtrans synconcealed synstack system systemlist tabpagebuflist tabpagenr tabpagewinnr tagfiles taglist tan tanh tempname term_dumpdiff term_dumpload term_dumpwrite term_getaltscreen term_getansicolors term_getattr term_getcursor term_getjob term_getline term_getscrolled term_getsize term_getstatus term_gettitle term_gettty term_list term_scrape term_sendkeys term_setansicolors term_setapi term_setkill term_setrestore term_setsize term_start term_wait test_alloc_fail test_autochdir test_feedinput test_garbagecollect_now test_garbagecollect_soon test_getvalue test_ignore_error test_null_blob test_null_channel test_null_dict test_null_job test_null_list
+syn keyword vimFuncName contained test_null_partial test_null_string test_option_not_set test_override test_refcount test_scrollbar test_setmouse test_settime timer_info timer_pause timer_start timer_stop timer_stopall tolower toupper tr trim trunc type undofile undotree uniq values virtcol visualmode wildmenumode win_execute win_findbuf win_getid win_gotoid win_id2tabwin win_id2win win_screenpos win_splitmove winbufnr wincol winheight winlayout winline winnr winrestcmd winrestview winsaveview winwidth wordcount writefile xor
 
 "--- syntax here and above generated by mkvimvim ---
 " Special Vim Highlighting (not automatic) {{{1
