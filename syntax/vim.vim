@@ -1,8 +1,8 @@
 " Vim syntax file
-" Language:	Vim 8.1 script
+" Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Nov 25, 2019
+" Last Change:	Dec 23, 2019
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
 " Base File Version: 8.0-20
 " Base File URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2019-11-25T15:07:08+00:00 2244082"
+let b:loaded_syntax_vim_ex="2019-12-23T01:09:18+00:00 a6f3f94"
 let s:keepcpo= &cpo
 set cpo&vim
 
