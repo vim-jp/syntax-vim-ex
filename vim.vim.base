@@ -2,9 +2,9 @@
 " Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	July 31, 2018
+" Last Change:	Mar 08, 2019
 " Base File Author: Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
-" Base File Version: 8.0-20
+" Base File Version: 8.0-21
 " Base File URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
 " DO NOT CHANGE DIRECTLY.
@@ -207,7 +207,7 @@ syn keyword vimAugroupKey contained	aug[roup]
 " =========
 syn cluster	vimOperGroup	contains=vimEnvvar,vimFunc,vimFuncVar,vimOper,vimOperParen,vimNumber,vimString,vimRegister,vimContinue
 syn match	vimOper	"\%#=1\(==\|!=\|>=\|<=\|=\~\|!\~\|>\|<\|=\)[?#]\{0,2}"	skipwhite nextgroup=vimString,vimSpecFile
-syn match	vimOper	"\(\<is\>\|\<isnot\>\)[?#]\{0,2}"		skipwhite nextgroup=vimString,vimSpecFile
+syn match	vimOper	"\(\<is\|\<isnot\)[?#]\{0,2}\>"		skipwhite nextgroup=vimString,vimSpecFile
 syn match	vimOper	"||\|&&\|[-+.]"			skipwhite nextgroup=vimString,vimSpecFile
 syn region	vimOperParen 	matchgroup=vimParenSep	start="(" end=")" contains=@vimOperGroup
 syn region	vimOperParen	matchgroup=vimSep		start="{" end="}" contains=@vimOperGroup nextgroup=vimVar,vimFuncVar
