@@ -225,16 +225,17 @@ endif
 " =========
 syn cluster	vimFuncList	contains=vimCommand,vimFunctionError,vimFuncKey,Tag,vimFuncSID
 syn cluster	vimFuncBodyList	contains=vimAbb,vimAddress,vimAugroupKey,vimAutoCmd,vimCmplxRepeat,vimComment,vimContinue,vimCtrlChar,vimEcho,vimEchoHL,vimExecute,vimIsCommand,vimFBVar,vimFunc,vimFunction,vimFuncVar,vimGlobal,vimHighlight,vimIsCommand,vimLet,vimLetHereDoc,vimLineComment,vimMap,vimMark,vimNorm,vimNotation,vimNotFunc,vimNumber,vimOper,vimOperParen,vimRegion,vimRegister,vimSearch,vimSet,vimSpecFile,vimString,vimSubst,vimSynLine,vimUnmap,vimUserCommand
-syn match	vimFunction	"\<fu\%[nction]!\=\s\+\%(<[sS][iI][dD]>\|[sSgGbBwWtTlL]:\)\=\%(\i\|[#.]\|{.\{-1,}}\)*\ze\s*("	contains=@vimFuncList nextgroup=vimFuncBody
+syn match	vimFunction	"\<\(fu\%[nction]\|def\)!\=\s\+\%(<[sS][iI][dD]>\|[sSgGbBwWtTlL]:\)\=\%(\i\|[#.]\|{.\{-1,}}\)*\ze\s*("	contains=@vimFuncList nextgroup=vimFuncBody
 
 if exists("g:vimsyn_folding") && g:vimsyn_folding =~# 'f'
- syn region	vimFuncBody  contained	fold start="\ze\s*("	matchgroup=vimCommand end="\<endf\%[unction]\>"		contains=@vimFuncBodyList
+    syn region	vimFuncBody  contained	fold start="\ze\s*("	matchgroup=vimCommand end="\<\(endf\%[unction]\|endd\%[def]\)\>"		contains=@vimFuncBodyList
 else
- syn region	vimFuncBody  contained	start="\ze\s*("	matchgroup=vimCommand end="\<endf\%[unction]\>"		contains=@vimFuncBodyList
+ syn region	vimFuncBody  contained	start="\ze\s*("	matchgroup=vimCommand end="\<\(endf\%[unction]\|endd\%[def]\)\>"		contains=@vimFuncBodyList
 endif
 syn match	vimFuncVar   contained	"a:\(\K\k*\|\d\+\)"
 syn match	vimFuncSID   contained	"\c<sid>\|\<s:"
 syn keyword	vimFuncKey   contained	fu[nction]
+syn keyword	vimFuncKey   contained	def
 syn match	vimFuncBlank contained	"\s\+"
 
 syn keyword	vimPattern   contained	start	skip	end
