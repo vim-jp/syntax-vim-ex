@@ -259,7 +259,8 @@ function! s:get_vim_command_type(cmd_name)
 	"   5: mapclear
 	"   6: unmap
 	"   99: (Exclude registration of "syn keyword")
-	let map_prefix = '^[anvxsoilc]\?'
+	let menu_prefix = '^\%([acinosvx]\?\|tl\)'
+	let map_prefix  = '^[acilnostvx]\?'
 	let exclude_list = [
 	\	'map',
 	\	'substitute', 'smagic', 'snomagic',
@@ -274,7 +275,7 @@ function! s:get_vim_command_type(cmd_name)
 		let ret = 99
 	elseif a:cmd_name =~# '^\%(abbreviate\|noreabbrev\|\l\%(nore\)\?abbrev\)$'
 		let ret = 2
-	elseif a:cmd_name =~# '^[anovxsic]\?\%(nore\|un\)\?menu$'
+	elseif a:cmd_name =~# menu_prefix . '\%(nore\|un\)\?menu$'
 		let ret = 3
 	elseif a:cmd_name =~# map_prefix . '\%(nore\)\?map$'
 		let ret = 4
