@@ -516,7 +516,7 @@ function! s:update_syntax_vim_file(vim_info)
 			endif
 			let li = matchlist(getline(lnum), pattern . '\s*START_STR\s*=\s*''\(.\{-}\)''\s*,\s*END_STR\s*=\s*''\(.\{-}\)''')
 			if empty(li)
-				throw 'Bad str_indo line:' . getline(lnum)
+				throw 'Bad str_info line:' . getline(lnum)
 			endif
 			let a:str_info.start = li[1]
 			let a:str_info.end = li[2]
