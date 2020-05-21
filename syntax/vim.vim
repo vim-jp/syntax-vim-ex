@@ -2,7 +2,7 @@
 " Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	May 15, 2020
+" Last Change:	May 21, 2020
 " Base File Author:  Charles E. Campbell <NdrOchipS@PcampbellAfamily.Mbiz>
 " Base File Version: 8.0-33
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2020-05-15T00:27:48+00:00 70853c2"
+let b:loaded_syntax_vim_ex="2020-05-21T12:33:36+00:00 00fca78"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -37,8 +37,7 @@ syn keyword vimCommand contained comp[iler] con[tinue] conf[irm] cons[t] cope[n]
 syn keyword vimCommand contained helpg[rep] helpt[ags] ha[rdcopy] hi[ghlight] hid[e] his[tory] i[nsert] iabc[lear] if ij[ump] il[ist] imp[ort] int[ro] is[earch] isp[lit] iuna[bbrev] j[oin] ju[mps] k kee[pmarks] keepj[umps] keepp[atterns] keepa[lt] l[ist] lN[ext] lNf[ile] la[st] lab[ove] lan[guage] lad[dexpr] laddb[uffer] laddf[ile] laf[ter] lat[er] lb[uffer] lbe[fore] lbel[ow] lbo[ttom] lc[d] lch[dir] lcl[ose] lcs[cope] ld[o] le[ft] lefta[bove] let lex[pr] lf[ile] lfd[o] lfir[st] lg[etfile] lgetb[uffer] lgete[xpr] lgr[ep] lgrepa[dd] lh[elpgrep] lhi[story] ll lla[st] lli[st] lmak[e] lne[xt] lnew[er] lnf[ile] lo[adview] loadk[eymap] loc[kmarks] lockv[ar] lol[der] lop[en] lp[revious] lpf[ile] lr[ewind] lt[ag] lua luad[o] luaf[ile] lv[imgrep] lvimgrepa[dd] lw[indow]
 syn keyword vimCommand contained ls m[ove] ma[rk] mak[e] marks mat[ch] menut[ranslate] mes[sages] mk[exrc] mks[ession] mksp[ell] mkv[imrc] mkvie[w] mod[e] mz[scheme] mzf[ile] n[ext] nb[key] nbc[lose] nbs[tart] new noa[utocmd] noh[lsearch] nos[wapfile] nu[mber] o[pen] ol[dfiles] on[ly] opt[ions] ow[nsyntax] p[rint] pa[ckadd] packl[oadall] pc[lose] pe[rl] perld[o] ped[it] po[p] popu[p] pp[op] pre[serve] prev[ious] pro[mptfind] promptr[epl] prof[ile] profd[el] ps[earch] pt[ag] ptN[ext] ptf[irst] ptj[ump] ptl[ast] ptn[ext] ptp[revious] ptr[ewind] pts[elect] pu[t] pw[d] py[thon] pyd[o] pyf[ile] py3 py3d[o] python3 py3f[ile] pyx pyxd[o] pythonx pyxf[ile] q[uit] quita[ll] qa[ll] r[ead] rec[over] red[o] redi[r] redr[aw] redraws[tatus] redrawt[abline] reg[isters] res[ize]
 syn keyword vimCommand contained ret[ab] retu[rn] rew[ind] ri[ght] rightb[elow] ru[ntime] rub[y] rubyd[o] rubyf[ile] rund[o] rv[iminfo] sN[ext] sa[rgument] sal[l] san[dbox] sav[eas] sb[uffer] sbN[ext] sba[ll] sbf[irst] sbl[ast] sbm[odified] sbn[ext] sbp[revious] sbr[ewind] sc[riptnames] scripte[ncoding] scriptv[ersion] scs[cope] setf[iletype] sf[ind] sfir[st] sh[ell] si[malt] sig[n] sil[ent] sl[eep] sla[st] sn[ext] so[urce] sor[t] sp[lit] spe[llgood] spelld[ump] spelli[nfo] spellr[epall] spellra[re] spellu[ndo] spellw[rong] spr[evious] sr[ewind] st[op] sta[g] star[tinsert] startg[replace] startr[eplace] stopi[nsert] stj[ump] sts[elect] sun[hide] sus[pend] sv[iew] sw[apname] synti[me] sync[bind] smi[le] t tN[ext] ta[g] tags tab tabc[lose] tabd[o] tabe[dit] tabf[ind]
-syn keyword vimCommand contained tabfir[st] tabm[ove] tabl[ast] tabn[ext] tabnew tabo[nly] tabp[revious] tabN[ext] tabr[ewind] tabs tc[d] tch[dir] tcl tcld[o] tclf[ile] te[aroff] ter[minal] tf[irst] th[row] tj[ump] tl[ast] tlm[enu] tln[oremenu] tlu[nmenu] tm[enu] tma[p] tmapc[lear] tn[ext] tno[remap] to[pleft] tp[revious] tr[ewind] try ts[elect] tu[nmenu] tunma[p] u[ndo] undoj[oin] undol[ist] una[bbreviate] unh[ide] unl[et] unlo[ckvar] uns[ilent] up[date] v[global] ve[rsion] verb[ose] vert[ical] vi[sual] vie[w] vim[grep] vimgrepa[dd] vim9[script] viu[sage] vne[w] vs[plit] w[rite] wN[ext] wa[ll] wh[ile] wi[nsize] winc[md] wind[o] winp[os] wn[ext] wp[revious] wq wqa[ll] wu[ndo] wv[iminfo] x[it] xa[ll] xr[estore] y[ank] z N[ext] P[rint] X dl dell delel deletl deletel
-syn keyword vimCommand contained dp dep delp delep deletp deletep
+syn keyword vimCommand contained tabfir[st] tabm[ove] tabl[ast] tabn[ext] tabnew tabo[nly] tabp[revious] tabN[ext] tabr[ewind] tabs tc[d] tch[dir] tcl tcld[o] tclf[ile] te[aroff] ter[minal] tf[irst] th[row] tj[ump] tl[ast] tm[enu] tn[ext] to[pleft] tp[revious] tr[ewind] try ts[elect] tu[nmenu] u[ndo] undoj[oin] undol[ist] una[bbreviate] unh[ide] unl[et] unlo[ckvar] uns[ilent] up[date] v[global] ve[rsion] verb[ose] vert[ical] vi[sual] vie[w] vim[grep] vimgrepa[dd] vim9[script] viu[sage] vne[w] vs[plit] w[rite] wN[ext] wa[ll] wh[ile] wi[nsize] winc[md] wind[o] winp[os] wn[ext] wp[revious] wq wqa[ll] wu[ndo] wv[iminfo] x[it] xa[ll] xr[estore] y[ank] z N[ext] P[rint] X dl dell delel deletl deletel dp dep delp delep deletp deletep
 
 syn match   vimCommand contained	"\<z[-+^.=]\=\>"
 syn keyword vimStdPlugin contained	Arguments Break Cfilter Clear Continue DiffOrig Evaluate Finish Gdb Lfilter Man Over Program Run S Source Step Stop Termdebug TermdebugCommand TOhtml Winbar XMLent XMLns
@@ -439,11 +438,11 @@ syn case match
 " ====
 syn match	vimMap		"\<map\>!\=\ze\s*[^(]" skipwhite nextgroup=vimMapMod,vimMapLhs
 " GEN_SYN_VIM: vimCommand map, START_STR='syn keyword vimMap', END_STR='skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs'
-syn keyword vimMap cm[ap] cno[remap] im[ap] ino[remap] lm[ap] ln[oremap] nm[ap] nn[oremap] no[remap] om[ap] ono[remap] smap snor[emap] vm[ap] vn[oremap] xm[ap] xn[oremap] skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs
+syn keyword vimMap cm[ap] cno[remap] im[ap] ino[remap] lm[ap] ln[oremap] nm[ap] nn[oremap] no[remap] om[ap] ono[remap] smap snor[emap] tma[p] tno[remap] vm[ap] vn[oremap] xm[ap] xn[oremap] skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs
 " GEN_SYN_VIM: vimCommand mapclear, START_STR='syn keyword vimMap', END_STR=''
-syn keyword vimMap cmapc[lear] imapc[lear] lmapc[lear] mapc[lear] nmapc[lear] omapc[lear] smapc[lear] vmapc[lear] xmapc[lear]
+syn keyword vimMap cmapc[lear] imapc[lear] lmapc[lear] mapc[lear] nmapc[lear] omapc[lear] smapc[lear] tmapc[lear] vmapc[lear] xmapc[lear]
 " GEN_SYN_VIM: vimCommand unmap, START_STR='syn keyword vimUnmap', END_STR='skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs'
-syn keyword vimUnmap cu[nmap] iu[nmap] lu[nmap] nun[map] ou[nmap] sunm[ap] unm[ap] vu[nmap] xu[nmap] skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs
+syn keyword vimUnmap cu[nmap] iu[nmap] lu[nmap] nun[map] ou[nmap] sunm[ap] tunma[p] unm[ap] vu[nmap] xu[nmap] skipwhite nextgroup=vimMapBang,vimMapMod,vimMapLhs
 syn match	vimMapLhs	contained	"\S\+"			contains=vimNotation,vimCtrlChar skipwhite nextgroup=vimMapRhs
 syn match	vimMapBang	contained	"!"			skipwhite nextgroup=vimMapMod,vimMapLhs
 syn match	vimMapMod	contained	"\%#=1\c<\(buffer\|expr\|\(local\)\=leader\|nowait\|plug\|script\|sid\|unique\|silent\)\+>" contains=vimMapModKey,vimMapModErr skipwhite nextgroup=vimMapMod,vimMapLhs
@@ -457,7 +456,7 @@ syn case match
 " =====
 syn cluster	vimMenuList contains=vimMenuBang,vimMenuPriority,vimMenuName,vimMenuMod
 " GEN_SYN_VIM: vimCommand menu, START_STR='syn keyword vimCommand', END_STR='skipwhite nextgroup=@vimMenuList'
-syn keyword vimCommand am[enu] an[oremenu] aun[menu] cme[nu] cnoreme[nu] cunme[nu] ime[nu] inoreme[nu] iunme[nu] me[nu] nme[nu] nnoreme[nu] noreme[nu] nunme[nu] ome[nu] onoreme[nu] ounme[nu] sme[nu] snoreme[nu] sunme[nu] unme[nu] vme[nu] vnoreme[nu] vunme[nu] xme[nu] xnoreme[nu] xunme[nu] skipwhite nextgroup=@vimMenuList
+syn keyword vimCommand am[enu] an[oremenu] aun[menu] cme[nu] cnoreme[nu] cunme[nu] ime[nu] inoreme[nu] iunme[nu] me[nu] nme[nu] nnoreme[nu] noreme[nu] nunme[nu] ome[nu] onoreme[nu] ounme[nu] sme[nu] snoreme[nu] sunme[nu] tlm[enu] tln[oremenu] tlu[nmenu] unme[nu] vme[nu] vnoreme[nu] vunme[nu] xme[nu] xnoreme[nu] xunme[nu] skipwhite nextgroup=@vimMenuList
 syn match	vimMenuName	"[^ \t\\<]\+"	contained nextgroup=vimMenuNameMore,vimMenuMap
 syn match	vimMenuPriority	"\d\+\(\.\d\+\)*"	contained skipwhite nextgroup=vimMenuName
 syn match	vimMenuNameMore	"\c\\\s\|<tab>\|\\\."	contained nextgroup=vimMenuName,vimMenuNameMore contains=vimNotation
