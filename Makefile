@@ -1,4 +1,4 @@
-RUN_VIM = vim -N -u NONE -i NONE -n 
+RUN_VIM = vim -N -u NONE -i NONE -n
 VIM_SRCDIR = ./vim/src
 REVISION ?= $(shell date +%Y-%m-%dT%H:%M:%S%:z)
 
