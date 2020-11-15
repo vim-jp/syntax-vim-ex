@@ -10,7 +10,7 @@ An excellent Vim's syntax highlighting file for Vim script.
 -   Omitted keyword extraction algorithm of Ex command is perfect because it is
     same and the C source code of Vim.
 -   It will immediately follow the Vim updates.
--   Generator source code is all open sourced.  (See generator branch)
+-   Generator source code is all open sourced.  (See [generator][generator] branch)
 
 ## Requirement
 
@@ -60,3 +60,4 @@ Follow the [Vim license][license]
 
 [original]:https://github.com/vim/vim/blob/master/runtime/syntax/vim.vim
 [license]:https://github.com/vim/vim/blob/master/README.md#copying
+[generator]:https://github.com/vim-jp/syntax-vim-ex/tree/generator
