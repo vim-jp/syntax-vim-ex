@@ -669,7 +669,7 @@ if !filereadable(s:luapath)
   endif
  endfor
 endif
-if (g:vimsyn_embed =~# 'l' && has("lua")) && filereadable(s:luapath)
+if g:vimsyn_embed =~# 'l' && (has("lua") || has('nvim-0.4.3')) && filereadable(s:luapath)
  unlet! b:current_syntax
  syn cluster vimFuncBodyList	add=vimLuaRegion
  exe "syn include @vimLuaScript ".s:luapath
