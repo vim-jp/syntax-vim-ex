@@ -2,7 +2,7 @@
 " Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Jan 19, 2021
+" Last Change:	Jan 20, 2021
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Base File Version: 8.0-47
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2021-01-19T16:02:33+00:00 6310dc9"
+let b:loaded_syntax_vim_ex="2021-01-20T13:49:35+00:00 2574360"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -198,8 +198,8 @@ syn match vimNumber	'-\d\+\%(\.\d\+\%([eE][+-]\=\d\+\)\=\)\='  skipwhite nextgro
 syn match vimNumber	'\<0[xX]\x\+'		       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
 syn match vimNumber	'\%(^\|\A\)\zs#\x\{6}'             	       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
 syn match vimNumber	'\<0[zZ][a-zA-Z0-9.]\+'                    skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
-syn match vimNumber	'0[oO]\=[0-7]\+'		       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
-syn match vimNumber	'0[bB][01]\+'		       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
+syn match vimNumber	'\<0[oO]\=[0-7]\+'	       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
+syn match vimNumber	'\<0[bB][01]\+'		       skipwhite nextgroup=vimGlobal,vimSubst,vimCommand,vimComment,vim9Comment
 
 " All vimCommands are contained by vimIsCommand. {{{2
 syn match vimCmdSep	"[:|]\+"	skipwhite nextgroup=vimAddress,vimAutoCmd,vimEcho,vimIsCommand,vimExtCmd,vimFilter,vimLet,vimMap,vimMark,vimSet,vimSyntax,vimUserCmd
