@@ -4,6 +4,8 @@ on:
     branches:
       - generator
   workflow_dispatch:
+  schedule:
+    - cron: '36 20 * * Sat'
 
 jobs:
   generate:
