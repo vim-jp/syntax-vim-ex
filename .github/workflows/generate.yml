@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - generator
+  workflow_dispatch:
 
 jobs:
   generate:
