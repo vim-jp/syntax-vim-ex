@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: '36 20 * * Sat'
 
+# workflow_dispatch and schedule : work under master branch
+# push - branches - generator    : work under generator branch
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -31,12 +34,7 @@ jobs:
           cd ..
           cp -f generator/vim.vim syntax/vim.vim
           rm -rf generator
-      - name: Check changes
-        id: changes
-        run: |
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
       - name: Commit updated master branch
-        if: steps.changes.outputs.count > 0
         uses: EndBug/add-and-commit@v7
         with:
           author_name: '${{ github.actor }}'
@@ -46,3 +44,11 @@ jobs:
           branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Use below statement when check diff.
+      #   if: steps.changes.outputs.count > 0
+      # but always diff exists, because inserted time strings are different
+      # - name: Check changes
+      #   id: changes
+      #   run: |
+      #     echo "::set-output name=count::$(git diff --name-only | wc -l)"
