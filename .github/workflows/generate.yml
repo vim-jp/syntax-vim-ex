@@ -1,0 +1,49 @@
+name: Generate vim syntax ex
+on:
+  push:
+    branches:
+      - generator
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Checkout generator
+        uses: actions/checkout@v2
+        with:
+          ref: generator
+          path: generator
+          submodules: false
+            # submodule need manual update: vim/vim is huge
+      - name: Update vim/vim link
+        run: |
+          cd generator
+          git submodule init
+          git submodule update --depth 50
+          cd ..
+      - name: Generate new syntax
+        run: |
+          cd generator
+          make REVISION="$(date +%Y-%m-%dT%H:%M:%S%:z) $(git log -1 --format=%h)"
+          make test
+          cd ..
+          cp -f generator/vim.vim syntax/vim.vim
+          rm -rf generator
+      - name: Check changes
+        id: changes
+        run: |
+          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+      - name: Commit updated master branch
+        if: steps.changes.outputs.count > 0
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: '${{ github.actor }}'
+          author_email: '${{ github.actor }}@users.noreply.github.com'
+          message: 'Update syntax ${{ steps.current-time.outputs.ISOTime }}'
+          add: 'syntax/vim.vim'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
