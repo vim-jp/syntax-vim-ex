@@ -2,7 +2,7 @@
 " Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Nov 04, 2021
+" Last Change:	Nov 16, 2021
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Base File Version: 8.2-06
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2021-11-04T12:49:40+00:00 8226d71"
+let b:loaded_syntax_vim_ex="2021-11-16T05:36:48+00:00 90027ef"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -91,7 +91,7 @@ syn keyword vimErrSetting contained invanti invantialias invakm invaltkeymap inv
 syn case ignore
 " GEN_SYN_VIM: vimAutoEvent, START_STR='syn keyword vimAutoEvent contained', END_STR=''
 syn keyword vimAutoEvent contained BufAdd BufCreate BufDelete BufEnter BufFilePost BufFilePre BufHidden BufLeave BufNew BufNewFile BufRead BufReadCmd BufReadPost BufReadPre BufUnload BufWinEnter BufWinLeave BufWipeout BufWrite BufWritePost BufWritePre BufWriteCmd CmdlineChanged CmdlineEnter CmdlineLeave CmdwinEnter CmdwinLeave CmdUndefined ColorScheme ColorSchemePre CompleteChanged CompleteDone CompleteDonePre CursorHold CursorHoldI CursorMoved CursorMovedI DiffUpdated DirChanged EncodingChanged ExitPre FileEncoding FileAppendPost FileAppendPre FileAppendCmd FileChangedShell FileChangedShellPost FileChangedRO FileReadPost FileReadPre FileReadCmd FileType FileWritePost FileWritePre FileWriteCmd FilterReadPost FilterReadPre FilterWritePost FilterWritePre FocusGained
-syn keyword vimAutoEvent contained FocusLost FuncUndefined GUIEnter GUIFailed InsertChange InsertEnter InsertLeave InsertLeavePre InsertCharPre MenuPopup ModeChanged OptionSet QuickFixCmdPost QuickFixCmdPre QuitPre RemoteReply SafeState SafeStateAgain SessionLoadPost ShellCmdPost ShellFilterPost SigUSR1 SourceCmd SourcePre SourcePost SpellFileMissing StdinReadPost StdinReadPre SwapExists Syntax TabNew TabClosed TabEnter TabLeave TermChanged TerminalOpen TerminalWinOpen TermResponse TextChanged TextChangedI TextChangedP User VimEnter VimLeave VimLeavePre WinNew WinEnter WinLeave VimResized TextYankPost VimSuspend VimResume
+syn keyword vimAutoEvent contained FocusLost FuncUndefined GUIEnter GUIFailed InsertChange InsertEnter InsertLeave InsertLeavePre InsertCharPre MenuPopup ModeChanged OptionSet QuickFixCmdPost QuickFixCmdPre QuitPre RemoteReply SafeState SafeStateAgain SessionLoadPost ShellCmdPost ShellFilterPost SigUSR1 SourceCmd SourcePre SourcePost SpellFileMissing StdinReadPost StdinReadPre SwapExists Syntax TabNew TabClosed TabEnter TabLeave TermChanged TerminalOpen TerminalWinOpen TermResponse TextChanged TextChangedI TextChangedP User VimEnter VimLeave VimLeavePre WinNew WinClosed WinEnter WinLeave VimResized TextYankPost VimSuspend VimResume
 
 " Highlight commonly used Groupnames {{{2
 syn keyword vimGroup contained	Comment Constant String Character Number Boolean Float Identifier Function Statement Conditional Repeat Label Operator Keyword Exception PreProc Include Define Macro PreCondit Type StorageClass Structure Typedef Special SpecialChar Tag Delimiter SpecialComment Debug Underlined Ignore Error Todo
