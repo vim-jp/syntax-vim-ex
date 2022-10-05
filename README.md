@@ -45,10 +45,9 @@ to gh-pages <http://vim-jp.org/syntax-vim-ex/> automatically.
 
 Name                 |Description
 ---------------------|------------------------------------------------------
-`README.md`          |This file
 `Makefile`           |Makefile to generate vim.vim
+`README.md`          |This file
 `gen_syntax_vim.vim` |Script to generate vim.vim
 `update_date.vim`    |Script to update "Last Change:"
 `vim.vim.base`       |Template for vim.vim
 `vim`                |Submodule to include github.com/vim/vim
-`tools/`             |Misc tools: used to deploy from Travis-CI
