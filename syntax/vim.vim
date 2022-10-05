@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2022-10-05T00:48:02+00:00 508f821"
+let b:loaded_syntax_vim_ex="2022-10-05T01:01:19+00:00 0439cc1"
 let s:keepcpo= &cpo
 set cpo&vim
 
