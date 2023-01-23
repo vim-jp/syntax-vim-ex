@@ -2,7 +2,7 @@
 " Language:	Vim script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Jan 19, 2023
+" Last Change:	Jan 23, 2023
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Base File Version: 8.2-06
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2023-01-19T02:25:03+00:00 57bfb7e"
+let b:loaded_syntax_vim_ex="2023-01-23T01:11:03+00:00 755dc47"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -316,7 +316,7 @@ endif
 syn case ignore
 syn keyword	vimUserAttrbKey   contained	b[ang] bu[ffer] r[egister] ba[r] n[args] ra[nge] c[ount] com[plete] a[ddr]
 " GEN_SYN_VIM: vimUserAttrbCmplt, START_STR='syn keyword vimUserAttrbCmplt contained', END_STR=''
-syn keyword vimUserAttrbCmplt contained arglist augroup behave buffer color command compiler cscope diff_buffer dir environment event expression file file_in_path filetype function help highlight history locale mapclear mapping menu messages syntax syntime option packadd shellcmd sign tag tag_listfiles user var breakpoint scriptnames
+syn keyword vimUserAttrbCmplt contained arglist augroup behave buffer color command compiler cscope diff_buffer dir environment event expression file file_in_path filetype function help highlight history locale mapclear mapping menu messages syntax syntime option packadd runtime shellcmd sign tag tag_listfiles user var breakpoint scriptnames
 syn keyword	vimUserAttrbCmplt contained	custom customlist nextgroup=vimUserAttrbCmpltFunc,vimUserCmdError
 syn match	vimUserAttrbCmpltFunc contained	",\%([sS]:\|<[sS][iI][dD]>\)\=\%(\h\w*\%(#\h\w*\)\+\|\h\w*\)"hs=s+1 nextgroup=vimUserCmdError
 syn keyword	vimUserAttrbAddr	contained	lines arguments buffers loaded_buffers windows tabs
