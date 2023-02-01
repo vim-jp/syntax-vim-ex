@@ -4,7 +4,7 @@
 " URL:	https://github.com/vim-jp/syntax-vim-ex
 " Last Change:	June 20, 2021
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
-" Base File Version: 8.2-06
+" Base File Version: 8.2-07
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
 
 " DO NOT CHANGE DIRECTLY.
@@ -22,7 +22,7 @@ if exists("b:current_syntax")
   endif
 endif
 let b:loaded_syntax_vim_ex="__REVISION__"
-let s:keepcpo= &cpo
+let s:keepcpo = &cpo
 set cpo&vim
 
 " vimTodo: contains common special-notices for comments {{{2
