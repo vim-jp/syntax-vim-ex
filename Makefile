@@ -15,7 +15,7 @@ test: vim.vim
 	grep -e '^let b:loaded_syntax_vim_ex=' vim.vim | grep -v -e __REVISION__
 
 update:
-	(cd vim; git pull -p)
+	(cd vim; git pull -p origin master)
 
 diff:
 	git stash
