@@ -2,7 +2,7 @@
 " Language:	Vim 9.0 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Feb 02, 2023
+" Last Change:	Mar 14, 2023
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Base File Version: 9.0-18
 " Base File URL:	   http://www.drchip.org/astronaut/vim/index.html#SYNTAX_VIM
@@ -21,7 +21,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2023-02-02T02:54:19+00:00 d389973"
+let b:loaded_syntax_vim_ex="2023-03-14T00:27:00+00:00 086fc78"
 let s:keepcpo= &cpo
 set cpo&vim
 
@@ -99,7 +99,7 @@ syn keyword vimGroup contained	Comment Constant String Character Number Boolean 
 
 " Default highlighting groups {{{2
 " GEN_SYN_VIM: vimHLGroup, START_STR='syn keyword vimHLGroup contained', END_STR=''
-syn keyword vimHLGroup contained ErrorMsg IncSearch ModeMsg NonText StatusLine StatusLineNC EndOfBuffer VertSplit VisualNOS DiffText PmenuSbar TabLineSel TabLineFill Cursor lCursor QuickFixLine CursorLineSign CursorLineFold CurSearch Normal Directory LineNr CursorLineNr MoreMsg Question Search SpellBad SpellCap SpellRare SpellLocal PmenuThumb Pmenu PmenuSel SpecialKey Title WarningMsg WildMenu Folded FoldColumn SignColumn Visual DiffAdd DiffChange DiffDelete TabLine CursorColumn CursorLine ColorColumn Conceal MatchParen StatusLineTerm StatusLineTermNC ToolbarLine ToolbarButton Menu Tooltip Scrollbar CursorIM
+syn keyword vimHLGroup contained ErrorMsg IncSearch ModeMsg NonText StatusLine StatusLineNC EndOfBuffer VertSplit VisualNOS DiffText PmenuSbar TabLineSel TabLineFill Cursor lCursor QuickFixLine CursorLineSign CursorLineFold CurSearch PmenuKind PmenuKindSel PmenuExtra PmenuExtraSel Normal Directory LineNr CursorLineNr MoreMsg Question Search SpellBad SpellCap SpellRare SpellLocal PmenuThumb Pmenu PmenuSel SpecialKey Title WarningMsg WildMenu Folded FoldColumn SignColumn Visual DiffAdd DiffChange DiffDelete TabLine CursorColumn CursorLine ColorColumn Conceal MatchParen StatusLineTerm StatusLineTermNC ToolbarLine ToolbarButton Menu Tooltip Scrollbar CursorIM
 syn case match
 
 " Function Names {{{2
