@@ -264,7 +264,7 @@ function! s:get_vim_command_type(cmd_name)
 	let exclude_list = [
 	\	'map',
 	\	'substitute', 'smagic', 'snomagic',
-	\	'setlocal', 'setglobal', 'set',
+	\	'setlocal', 'setglobal', 'set', 'var',
 	\	'autocmd', 'doautocmd', 'doautoall',
 	\	'echo', 'echohl', 'execute',
 	\	'behave', 'filetype', 'augroup', 'normal', 'syntax',
