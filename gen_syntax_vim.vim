@@ -1,8 +1,9 @@
 " Vim syntax file generator
 " Language: Vim script
-" Maintainer: Hirohito Higashi (a.k.a. h_east)  https://github.com/h-east
-" Last Change: Sep 18, 2016
-" Version: 1.1.0
+" Maintainer: Hirohito Higashi (h_east)
+" URL: https://github.com/vim-jp/syntax-vim-ex
+" Last Change: Feb 11, 2024
+" Version: 2.0.0
 
 let s:keepcpo= &cpo
 set cpo&vim
@@ -240,6 +241,15 @@ function! s:parse_vim_command(cmd)
 			endfor
 		endfor
 
+		" Required for original behavior
+		let item.name = 'a'		" append
+		let item.type = 0
+		let item.omit_idx = -1
+		let item.syn_str = item.name
+		call add(a:cmd, copy(item))
+		let item.name = 'i'		" insert
+		call add(a:cmd, copy(item))
+
 		if empty(a:cmd)
 			throw 'cmd is empty'
 		endif
@@ -267,8 +277,11 @@ function! s:get_vim_command_type(cmd_name)
 	\	'setlocal', 'setglobal', 'set', 'var',
 	\	'autocmd', 'doautocmd', 'doautoall',
 	\	'echo', 'echohl', 'execute',
-	\	'behave', 'filetype', 'augroup', 'normal', 'syntax',
+	\	'behave', 'augroup', 'normal', 'syntax',
+	\	'append', 'insert',
+	\	'Next', 'Print', 'X',
 	\ ]
+	" Required for original behavior
 	" \	'global', 'vglobal'
 
 	if index(exclude_list, a:cmd_name) != -1
@@ -542,6 +555,10 @@ function! s:update_syntax_vim_file(vim_info)
 		" vimCommand - normal
 		let lnum = s:search_and_check('vimCommand normal', base_fname, str_info)
 		let lnum = s:append_syn_vimcmd(lnum, str_info, li, 0)
+		let lnum = s:append_syn_vimcmd(lnum, str_info, li, 3)		" menu
+		let lnum = s:append_syn_vimcmd(lnum, str_info, li, 4)		" map
+		let lnum = s:append_syn_vimcmd(lnum, str_info, li, 5)		" mapclear
+		let lnum = s:append_syn_vimcmd(lnum, str_info, li, 6)		" unmap
 
 		" vimOption
 		let kword = 'vimOption'
