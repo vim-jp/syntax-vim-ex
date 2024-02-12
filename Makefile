@@ -1,4 +1,4 @@
-VIM_SRCDIR = ../vim/src
+VIM_SRCDIR = ../../../../vim/src
 RUN_VIM = $(VIM_SRCDIR)/vim -N -u NONE -i NONE -n
 REVISION ?= $(shell date +%Y-%m-%dT%H:%M:%S%:z)
 
@@ -14,9 +14,9 @@ generate: vim.vim
 
 vim.vim: vim.vim.rc update_date.vim
 	@echo "Generating vim.vim ..."
-	@cp -f vim.vim.rc vim.vim
+	@cp -f vim.vim.rc ../vim.vim
 	@$(RUN_VIM) -S update_date.vim
-	@sed -i -e 's/__REVISION__/$(REVISION)/' vim.vim
+	@sed -i -e 's/__REVISION__/$(REVISION)/' ../vim.vim
 	@echo "done."
 
 vim.vim.rc: gen_syntax_vim.vim vim.vim.base $(SRC)
