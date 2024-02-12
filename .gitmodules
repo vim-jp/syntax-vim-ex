@@ -1,4 +1,0 @@
-[submodule "vim"]
-	path = vim
-	url = https://github.com/vim/vim.git
-	branch = master

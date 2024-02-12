@@ -1,5 +1,5 @@
-RUN_VIM = vim -N -u NONE -i NONE -n
-VIM_SRCDIR = ./vim/src
+VIM_SRCDIR = ../vim/src
+RUN_VIM = $(VIM_SRCDIR)/vim -N -u NONE -i NONE -n
 REVISION ?= $(shell date +%Y-%m-%dT%H:%M:%S%:z)
 
 SRC =	$(VIM_SRCDIR)/eval.c $(VIM_SRCDIR)/ex_cmds.h $(VIM_SRCDIR)/ex_docmd.c \
@@ -7,22 +7,20 @@ SRC =	$(VIM_SRCDIR)/eval.c $(VIM_SRCDIR)/ex_cmds.h $(VIM_SRCDIR)/ex_docmd.c \
 
 export VIM_SRCDIR
 
-build: vim.vim
-	@grep -e '^let b:loaded_syntax_vim_ex=' vim.vim | grep -v -e __REVISION__
+.PHONY: generate clean
+all: generate
 
-clean:
-	rm -f vim.vim.rc
-	rm -f vim.vim
-	rm -f sanity_check.err generator.err
-
-.PHONY: build clean distclean
+generate: vim.vim
 
 vim.vim: vim.vim.rc update_date.vim
+	@echo "Generating vim.vim ..."
 	@cp -f vim.vim.rc vim.vim
 	@$(RUN_VIM) -S update_date.vim
 	@sed -i -e 's/__REVISION__/$(REVISION)/' vim.vim
+	@echo "done."
 
 vim.vim.rc: gen_syntax_vim.vim vim.vim.base $(SRC)
+	@echo "Generating vim.vim.rc ..."
 	@rm -f sanity_check.err generator.err
 	@$(RUN_VIM) -S gen_syntax_vim.vim
 	@if test -f sanity_check.err ; then \
@@ -38,3 +36,9 @@ vim.vim.rc: gen_syntax_vim.vim vim.vim.base $(SRC)
 		echo ; \
 		exit 1 ; \
 	fi
+	@echo "done."
+
+clean:
+	rm -f vim.vim.rc
+	rm -f vim.vim
+	rm -f sanity_check.err generator.err
