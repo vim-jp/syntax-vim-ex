@@ -4,6 +4,9 @@
 
 Full open source sytax/vim.vim generator.
 
+# Announcement: The generator part of this product has been included in the [main stream](https://github.com/vim/vim) with [9b53c05](https://github.com/vim/vim/commit/9b53c052d58f73f2078c61a74622687306e51c17).
+# This product will no longer be updated.
+
 You can download generated recent syntax/vim.vim at <http://vim-jp.org/syntax-vim-ex/>.
 
 ## How to Build on Local
