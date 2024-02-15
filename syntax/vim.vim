@@ -2,7 +2,7 @@
 " Language:	Vim 9.0 script
 " Maintainer:	Hirohito Higashi <h.east.727 ATMARK gmail.com>
 " URL:	https://github.com/vim-jp/syntax-vim-ex
-" Last Change:	Feb 05, 2024
+" Last Change:	Feb 15, 2024
 " Base File Author:  Charles E. Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Base File Version: 9.0-25
 " 	2023 Nov 12 by Vim Project (:let-heredoc improvements)
@@ -23,7 +23,7 @@ if exists("b:current_syntax")
     finish
   endif
 endif
-let b:loaded_syntax_vim_ex="2024-02-05T13:46:53+00:00 b651cca"
+let b:loaded_syntax_vim_ex="2024-02-15T15:50:26+00:00 50ddec7"
 let s:keepcpo= &cpo
 set cpo&vim
 
